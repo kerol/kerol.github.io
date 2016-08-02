@@ -1252,6 +1252,8 @@ color
   background: transparent;
 }
 .body-wrap {
+  max-width: 60em;
+  margin: auto;
   margin-bottom: 126px;
   overflow: hidden;
 }
