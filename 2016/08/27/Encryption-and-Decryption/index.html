@@ -10,19 +10,19 @@
 
 
 
-<meta name="description" content="Getting Started如果你刚接触Spring，推荐使用Spring Boot来创建应用。Spring Boot基于Spring框架，集成了tomcat等模块，让你尽快跑起应用。你可以使用start.spring.io来创建基本工程，照着其他Getting Started guides就行了。你也可以发现其他Spring portfolio工程。
-注：下载基本工程后，需要熟悉gradle的">
+<meta name="description" content="最近对接各家支付，加密方式和流程眼花缭乱，有空总结下加密方式和处理流程，包括但不限于AES、RSA、SHA、MD5、BASE64等。由于时间和篇幅限制，只用Python语言做示例，Java的代码篇幅太大，一般PHP都有示例代码，毕竟是世界上最好的编程语言，喝杯Java冷静下。。。
+安装依赖库pycrypto[https://www.dlitz.net/software/pycrypto/api/c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring-ref Part 1 Ch 1: Getting Started with Spring">
-<meta property="og:url" content="http://kerol.me/2016/07/27/Spring-ref-Part-1-Ch-1-Getting-Started/index.html">
+<meta property="og:title" content="Encryption and Decryption">
+<meta property="og:url" content="http://kerol.me/2016/08/27/Encryption-and-Decryption/index.html">
 <meta property="og:site_name" content="Kerol Blog">
-<meta property="og:description" content="Getting Started如果你刚接触Spring，推荐使用Spring Boot来创建应用。Spring Boot基于Spring框架，集成了tomcat等模块，让你尽快跑起应用。你可以使用start.spring.io来创建基本工程，照着其他Getting Started guides就行了。你也可以发现其他Spring portfolio工程。
-注：下载基本工程后，需要熟悉gradle的">
-<meta property="og:updated_time" content="2016-07-27T05:16:57.000Z">
+<meta property="og:description" content="最近对接各家支付，加密方式和流程眼花缭乱，有空总结下加密方式和处理流程，包括但不限于AES、RSA、SHA、MD5、BASE64等。由于时间和篇幅限制，只用Python语言做示例，Java的代码篇幅太大，一般PHP都有示例代码，毕竟是世界上最好的编程语言，喝杯Java冷静下。。。
+安装依赖库pycrypto[https://www.dlitz.net/software/pycrypto/api/c">
+<meta property="og:updated_time" content="2016-08-27T09:28:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring-ref Part 1 Ch 1: Getting Started with Spring">
-<meta name="twitter:description" content="Getting Started如果你刚接触Spring，推荐使用Spring Boot来创建应用。Spring Boot基于Spring框架，集成了tomcat等模块，让你尽快跑起应用。你可以使用start.spring.io来创建基本工程，照着其他Getting Started guides就行了。你也可以发现其他Spring portfolio工程。
-注：下载基本工程后，需要熟悉gradle的">
+<meta name="twitter:title" content="Encryption and Decryption">
+<meta name="twitter:description" content="最近对接各家支付，加密方式和流程眼花缭乱，有空总结下加密方式和处理流程，包括但不限于AES、RSA、SHA、MD5、BASE64等。由于时间和篇幅限制，只用Python语言做示例，Java的代码篇幅太大，一般PHP都有示例代码，毕竟是世界上最好的编程语言，喝杯Java冷静下。。。
+安装依赖库pycrypto[https://www.dlitz.net/software/pycrypto/api/c">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -54,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Spring-ref Part 1 Ch 1: Getting Started with Spring | Kerol Blog</title>
+<title>Encryption and Decryption | Kerol Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -242,11 +242,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Spring-ref-Part-1-Ch-1-Getting-Started" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Encryption-and-Decryption" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/27/Spring-ref-Part-1-Ch-1-Getting-Started/" class="article-date">
-      <time datetime="2016-07-27T05:06:54.000Z" itemprop="datePublished">2016-07-27</time>
+      <a href="/2016/08/27/Encryption-and-Decryption/" class="article-date">
+      <time datetime="2016-08-27T03:48:42.000Z" itemprop="datePublished">2016-08-27</time>
 </a>
 
 
@@ -261,7 +261,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Spring-ref Part 1 Ch 1: Getting Started with Spring
+      Encryption and Decryption
     </h1>
   
 
@@ -272,7 +272,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-ref/">spring-ref</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encrypt/">encrypt</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -282,8 +282,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h3><p>如果你刚接触Spring，推荐使用Spring Boot来创建应用。Spring Boot基于Spring框架，集成了tomcat等模块，让你尽快跑起应用。<br>你可以使用<a href="http://start.spring.io" target="_blank" rel="external">start.spring.io</a>来创建基本工程，照着其他Getting Started guides就行了。你也可以发现其他Spring portfolio工程。</p>
-<p>注：下载基本工程后，需要熟悉gradle的配置，使用idea IDE和vim编辑器来开发。</p>
+        <p>最近对接各家支付，加密方式和流程眼花缭乱，有空总结下加密方式和处理流程，包括但不限于AES、RSA、SHA、MD5、BASE64等。<br>由于时间和篇幅限制，只用Python语言做示例，Java的代码篇幅太大，一般PHP都有示例代码，毕竟是世界上最好的编程语言，<br>喝杯Java冷静下。。。</p>
+<h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h3><p>pycrypto[<a href="https://www.dlitz.net/software/pycrypto/api/current/" target="_blank" rel="external">https://www.dlitz.net/software/pycrypto/api/current/</a>]<br>不太清楚CentOS服务器上的swig问题，Mac遇到的问题解决:<br>stackoverflow[<a href="http://stackoverflow.com/questions/33005354/" target="_blank" rel="external">http://stackoverflow.com/questions/33005354/</a>]<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">pip</span> install crypto # trouble comes here?</div><div class="line"><span class="keyword">brew </span>install openssl</div><div class="line"><span class="keyword">brew </span>install <span class="keyword">swig</span></div><div class="line"><span class="symbol">env</span> LDFLAGS=<span class="string">"-L$(brew --prefix openssl)/lib"</span> \</div><div class="line"><span class="symbol">CFLAGS</span>=<span class="string">"-I$(brew --prefix openssl)/include"</span> \</div><div class="line"><span class="keyword">SWIG_FEATURES="-cpperraswarn </span>-includeall -I$(<span class="keyword">brew </span>--prefix openssl)/<span class="meta">include</span><span class="string">" \</span></div></pre></td></tr></table></figure></p>
+<h3 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h3><a id="more"></a>
+<p>加密位数：128位，192位，256位；<br>模式：ECB，CBC常用；<br>填充模式：NoPadding, ZeroPadding, PKCS5Padding, PKCS7Padding常用；<br>PKCS#5 和 PKCS#7 唯一的区别就是前者规定了数据块大小是 64 比特(8 字节)，而 AES 中数据块大小是 128 比特(16字节)，因此在 AES 中， PKCS#5 和 PKCS#7 没有区别。<br>PyCrypto 是流行的 Python 加密/解密库。但是其 AES 的 ECB 模式在加密解密时未提供适合的密文填充工具，因此有必要自己实现一个，下面是常见的 PKCS#5 / PKCS#7 填充模式的一般写法：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">BS </span>= AES.<span class="keyword">block_size</span></div><div class="line"><span class="symbol">pad</span> <span class="symbol">=lambda</span> s: s +(<span class="keyword">BS </span>- len(s)% <span class="keyword">BS)* </span>chr(<span class="keyword">BS </span>- len(s)% <span class="keyword">BS)</span></div><div class="line"><span class="symbol">unpad</span> <span class="symbol">=lambda</span> s : s[<span class="number">0</span>:-ord(s[-<span class="number">1</span>])]</div></pre></td></tr></table></figure></p>
+<p>示例代码：<br><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">from Crypto.Cipher <span class="built_in">import</span> AES</div><div class="line"><span class="built_in">import</span> base64</div><div class="line"><span class="attr">AESKEY</span> = '<span class="number">0123456789</span>abcdef'</div><div class="line"><span class="attr">cipher</span> = AES.new(AESKEY)</div><div class="line"><span class="attr">tmp</span> = cipher.encrypt(pad(text))</div><div class="line"><span class="attr">encrypted</span> = base64.b64encode(tmp)</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -292,13 +295,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/07/27/Spring-ref-Part-1-Ch-1-Getting-Started/">Spring-ref Part 1 Ch 1: Getting Started with Spring</a></p>
+        <p><span>本文标题:</span><a href="/2016/08/27/Encryption-and-Decryption/">Encryption and Decryption</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Kerol Gao</a></p>
-        <p><span>发布时间:</span>2016-07-27, 13:06:54</p>
-        <p><span>最后更新:</span>2016-07-27, 13:16:57</p>
+        <p><span>发布时间:</span>2016-08-27, 11:48:42</p>
+        <p><span>最后更新:</span>2016-08-27, 17:28:26</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/07/27/Spring-ref-Part-1-Ch-1-Getting-Started/" title="Spring-ref Part 1 Ch 1: Getting Started with Spring">http://kerol.me/2016/07/27/Spring-ref-Part-1-Ch-1-Getting-Started/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://kerol.me/2016/07/27/Spring-ref-Part-1-Ch-1-Getting-Started/　　作者: Kerol Gao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/08/27/Encryption-and-Decryption/" title="Encryption and Decryption">http://kerol.me/2016/08/27/Encryption-and-Decryption/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://kerol.me/2016/08/27/Encryption-and-Decryption/　　作者: Kerol Gao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -310,16 +313,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/27/Spring-ref-Part-1-Ch-2-Introduction-to-Spring/">
-                    Spring-ref Part 1 Ch 2: Introduction to Spring
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/27/Spring-ref-Part-1-Overview-of-Spring-Framework/">
-                    Spring ref Part 1: Overview of Spring Framework
+                <a href="/2016/07/31/Spring-in-Action-Ch2-装配bean/">
+                    Spring in Action Ch2: 装配bean
                 </a>
             </div>
         
@@ -331,7 +328,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting-Started"><span class="toc-number">1.</span> <span class="toc-text">Getting Started</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装依赖库"><span class="toc-number">1.</span> <span class="toc-text">安装依赖库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#AES"><span class="toc-number">2.</span> <span class="toc-text">AES</span></a></li></ol>
         
     </div>
     <style>
@@ -367,7 +364,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Spring-ref Part 1 Ch 1: Getting Started with Spring　| Kerol Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Encryption and Decryption　| Kerol Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -387,15 +384,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/27/Spring-ref-Part-1-Ch-2-Introduction-to-Spring/" title="上一篇: Spring-ref Part 1 Ch 2: Introduction to Spring">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/27/Spring-ref-Part-1-Overview-of-Spring-Framework/" title="下一篇: Spring ref Part 1: Overview of Spring Framework">
+            <a href="/2016/07/31/Spring-in-Action-Ch2-装配bean/" title="下一篇: Spring in Action Ch2: 装配bean">
                 <i class="fa fa-angle-right"></i>
             </a>
         
