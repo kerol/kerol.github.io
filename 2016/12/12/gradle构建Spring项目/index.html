@@ -10,16 +10,19 @@
 
 
 
-<meta name="description" content="Spring IoC 容器及beans介绍这一章包括Spring IoC容器的原理。IoC也被称为依赖注入DI（注：还是有点区别的）。在创建bean的时候，IoC容器注入依赖。org.springframework.beans and org.springframework.context包是Spring Ioc容器的基础。">
+<meta name="description" content="About gradleA powerful building tool, replace maven, ant, ivy…PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~Official site
+build.gradle12345678910111213141516171819apply plugin: &apos;java&apos;task helloWorld &amp;l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring-ref Part 2 Ch 7: IoC container">
-<meta property="og:url" content="http://kerol.me/2016/07/28/Spring-ref-Part-2-Ch-7-IoC-container/index.html">
+<meta property="og:title" content="gradle构建Spring项目">
+<meta property="og:url" content="http://kerol.me/2016/12/12/gradle构建Spring项目/index.html">
 <meta property="og:site_name" content="Kerol Blog">
-<meta property="og:description" content="Spring IoC 容器及beans介绍这一章包括Spring IoC容器的原理。IoC也被称为依赖注入DI（注：还是有点区别的）。在创建bean的时候，IoC容器注入依赖。org.springframework.beans and org.springframework.context包是Spring Ioc容器的基础。">
-<meta property="og:updated_time" content="2016-07-28T08:11:06.000Z">
+<meta property="og:description" content="About gradleA powerful building tool, replace maven, ant, ivy…PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~Official site
+build.gradle12345678910111213141516171819apply plugin: &apos;java&apos;task helloWorld &amp;l">
+<meta property="og:updated_time" content="2016-12-11T17:06:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring-ref Part 2 Ch 7: IoC container">
-<meta name="twitter:description" content="Spring IoC 容器及beans介绍这一章包括Spring IoC容器的原理。IoC也被称为依赖注入DI（注：还是有点区别的）。在创建bean的时候，IoC容器注入依赖。org.springframework.beans and org.springframework.context包是Spring Ioc容器的基础。">
+<meta name="twitter:title" content="gradle构建Spring项目">
+<meta name="twitter:description" content="About gradleA powerful building tool, replace maven, ant, ivy…PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~Official site
+build.gradle12345678910111213141516171819apply plugin: &apos;java&apos;task helloWorld &amp;l">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -51,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Spring-ref Part 2 Ch 7: IoC container | Kerol Blog</title>
+<title>gradle构建Spring项目 | Kerol Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -239,11 +242,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-Spring-ref-Part-2-Ch-7-IoC-container" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-gradle构建Spring项目" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/07/28/Spring-ref-Part-2-Ch-7-IoC-container/" class="article-date">
-      <time datetime="2016-07-28T08:04:04.000Z" itemprop="datePublished">2016-07-28</time>
+      <a href="/2016/12/12/gradle构建Spring项目/" class="article-date">
+      <time datetime="2016-12-11T16:18:17.000Z" itemprop="datePublished">2016-12-12</time>
 </a>
 
 
@@ -258,7 +261,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Spring-ref Part 2 Ch 7: IoC container
+      gradle构建Spring项目
     </h1>
   
 
@@ -269,7 +272,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-ref/">spring-ref</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -279,7 +282,10 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="Spring-IoC-容器及beans介绍"><a href="#Spring-IoC-容器及beans介绍" class="headerlink" title="Spring IoC 容器及beans介绍"></a>Spring IoC 容器及beans介绍</h3><p>这一章包括Spring IoC容器的原理。IoC也被称为依赖注入DI（注：还是有点区别的）。在创建bean的时候，IoC容器注入依赖。<br>org.springframework.beans and org.springframework.context包是Spring Ioc容器的基础。</p>
+        <h3 id="About-gradle"><a href="#About-gradle" class="headerlink" title="About gradle"></a>About gradle</h3><p>A powerful building tool, replace maven, ant, ivy…<br>PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~<br><a href="https://gradle.org" target="_blank" rel="external">Official site</a></p>
+<h3 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle"></a>build.gradle</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">apply plugin: <span class="string">'java'</span></div><div class="line"></div><div class="line"><span class="keyword">task</span> helloWorld &lt;&lt; &#123;</div><div class="line">    <span class="keyword">println</span> <span class="string">'hello, world'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">repositories</span> &#123;</div><div class="line">    mavenCentral()</div><div class="line">    <span class="comment">// and optionally...</span></div><div class="line">    maven &#123; url <span class="string">"http://repo.spring.io/release"</span> &#125;</div><div class="line">    <span class="comment">// maven &#123; url "http://repo.spring.io/milestone" &#125;</span></div><div class="line">    <span class="comment">// maven &#123; url "http://repo.spring.io/snapshot" &#125;</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">dependencies</span> &#123;</div><div class="line">    <span class="comment">// spring-context depends on spring-core, spring-beans...</span></div><div class="line">    <span class="keyword">compile</span>(<span class="string">"org.springframework:spring-context:4.3.4.RELEASE"</span>)</div><div class="line">    testCompile(<span class="string">"org.springframework:spring-test:4.3.4.RELEASE"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="gradle-build"><a href="#gradle-build" class="headerlink" title="gradle build"></a>gradle build</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">folder tree:</div><div class="line">⇒  tree -L <span class="number">5</span> src</div><div class="line">src</div><div class="line">└── main</div><div class="line">    └── java</div><div class="line">        └── me</div><div class="line">            └── kerol</div><div class="line">                ├── Hello<span class="selector-class">.java</span></div><div class="line">                └── World<span class="selector-class">.java</span></div><div class="line">⇒  gradle build</div><div class="line">⇒  tree -L <span class="number">6</span> build</div><div class="line">build</div><div class="line">├── classes</div><div class="line">│   └── main</div><div class="line">│       └── me</div><div class="line">│           └── kerol</div><div class="line">│               ├── Hello<span class="selector-class">.class</span></div><div class="line">│               └── World<span class="selector-class">.class</span></div><div class="line">├── dependency-cache</div><div class="line">├── libs</div><div class="line">    └── demo<span class="selector-class">.jar</span></div><div class="line">⇒  java -cp build/classes/main/ me<span class="selector-class">.kerol</span><span class="selector-class">.Hello</span></div><div class="line">Hello World!</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -288,13 +294,13 @@
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/07/28/Spring-ref-Part-2-Ch-7-IoC-container/">Spring-ref Part 2 Ch 7: IoC container</a></p>
+        <p><span>Title:</span><a href="/2016/12/12/gradle构建Spring项目/">gradle构建Spring项目</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Kerol Gao</a></p>
-        <p><span>Created:</span>2016-07-28, 16:04:04</p>
-        <p><span>Updated:</span>2016-07-28, 16:11:06</p>
+        <p><span>Created:</span>2016-12-12, 00:18:17</p>
+        <p><span>Updated:</span>2016-12-12, 01:06:50</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/07/28/Spring-ref-Part-2-Ch-7-IoC-container/" title="Spring-ref Part 2 Ch 7: IoC container">http://kerol.me/2016/07/28/Spring-ref-Part-2-Ch-7-IoC-container/</a>
-            <span class="copy-path" data-clipboard-text="From http://kerol.me/2016/07/28/Spring-ref-Part-2-Ch-7-IoC-container/　　By Kerol Gao" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2016/12/12/gradle构建Spring项目/" title="gradle构建Spring项目">http://kerol.me/2016/12/12/gradle构建Spring项目/</a>
+            <span class="copy-path" data-clipboard-text="From http://kerol.me/2016/12/12/gradle构建Spring项目/　　By Kerol Gao" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -306,16 +312,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/07/31/Spring-in-Action-Ch2-装配bean/">
-                    Spring in Action Ch2: 装配bean
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/07/28/Spring-ref-Part-2-Core-Technologies/">
-                    Spring-ref Part 2 Core Technologies
+                <a href="/2016/12/09/吾日三省吾身/">
+                    吾日三省吾身
                 </a>
             </div>
         
@@ -327,7 +327,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spring-IoC-容器及beans介绍"><span class="toc-number">1.</span> <span class="toc-text">Spring IoC 容器及beans介绍</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#About-gradle"><span class="toc-number">1.</span> <span class="toc-text">About gradle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#build-gradle"><span class="toc-number">2.</span> <span class="toc-text">build.gradle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gradle-build"><span class="toc-number">3.</span> <span class="toc-text">gradle build</span></a></li></ol>
         
     </div>
     <style>
@@ -363,7 +363,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Spring-ref Part 2 Ch 7: IoC container　| Kerol Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"gradle构建Spring项目　| Kerol Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -383,15 +383,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/07/31/Spring-in-Action-Ch2-装配bean/" title="Pre: Spring in Action Ch2: 装配bean">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
 
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/07/28/Spring-ref-Part-2-Core-Technologies/" title="Next: Spring-ref Part 2 Core Technologies">
+            <a href="/2016/12/09/吾日三省吾身/" title="Next: 吾日三省吾身">
                 <i class="fa fa-angle-right"></i>
             </a>
         
