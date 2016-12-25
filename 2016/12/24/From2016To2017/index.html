@@ -10,22 +10,25 @@
 
 
 
-<meta name="description" content="About gradleA powerful building tool, replace maven, ant, ivy…PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~Official siteUserGuideDownload
-Install gradle and config1brew install gradle
-然后就可以使用gradle了，为">
+<meta name="description" content="我不会把自己局限在互联网领域，但是目前还是最好先成为真正的full-stack engineer.下面分别说下不同部分的target and target，一个模块玩腻的话换一个部分试试:)Updating…
+Java Ecosystem主要是Spring框架系列，及涉及到的web、计算、数据部分，还有不明觉厉的scala、groovy等；Note: 快速和敏捷开发，and有很好的架构基础
+
+Sp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gradle构建Spring项目">
-<meta property="og:url" content="http://kerol.me/2016/12/12/gradle构建Spring项目/index.html">
+<meta property="og:title" content="From2016->2017">
+<meta property="og:url" content="http://kerol.me/2016/12/24/From2016To2017/index.html">
 <meta property="og:site_name" content="Kerol Blog">
-<meta property="og:description" content="About gradleA powerful building tool, replace maven, ant, ivy…PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~Official siteUserGuideDownload
-Install gradle and config1brew install gradle
-然后就可以使用gradle了，为">
-<meta property="og:updated_time" content="2016-12-14T18:00:15.000Z">
+<meta property="og:description" content="我不会把自己局限在互联网领域，但是目前还是最好先成为真正的full-stack engineer.下面分别说下不同部分的target and target，一个模块玩腻的话换一个部分试试:)Updating…
+Java Ecosystem主要是Spring框架系列，及涉及到的web、计算、数据部分，还有不明觉厉的scala、groovy等；Note: 快速和敏捷开发，and有很好的架构基础
+
+Sp">
+<meta property="og:updated_time" content="2016-12-24T09:33:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gradle构建Spring项目">
-<meta name="twitter:description" content="About gradleA powerful building tool, replace maven, ant, ivy…PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~Official siteUserGuideDownload
-Install gradle and config1brew install gradle
-然后就可以使用gradle了，为">
+<meta name="twitter:title" content="From2016->2017">
+<meta name="twitter:description" content="我不会把自己局限在互联网领域，但是目前还是最好先成为真正的full-stack engineer.下面分别说下不同部分的target and target，一个模块玩腻的话换一个部分试试:)Updating…
+Java Ecosystem主要是Spring框架系列，及涉及到的web、计算、数据部分，还有不明觉厉的scala、groovy等；Note: 快速和敏捷开发，and有很好的架构基础
+
+Sp">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +60,7 @@ Install gradle and config1brew install gradle
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>gradle构建Spring项目 | Kerol Blog</title>
+<title>From2016-&gt;2017 | Kerol Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -245,11 +248,11 @@ Install gradle and config1brew install gradle
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-gradle构建Spring项目" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-From2016To2017" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/12/gradle构建Spring项目/" class="article-date">
-      <time datetime="2016-12-11T16:18:17.000Z" itemprop="datePublished">2016-12-12</time>
+      <a href="/2016/12/24/From2016To2017/" class="article-date">
+      <time datetime="2016-12-24T08:34:54.000Z" itemprop="datePublished">2016-12-24</time>
 </a>
 
 
@@ -264,7 +267,7 @@ Install gradle and config1brew install gradle
         
   
     <h1 class="article-title" itemprop="name">
-      gradle构建Spring项目
+      From2016-&gt;2017
     </h1>
   
 
@@ -275,7 +278,7 @@ Install gradle and config1brew install gradle
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/from2next/">from2next</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -285,12 +288,21 @@ Install gradle and config1brew install gradle
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="About-gradle"><a href="#About-gradle" class="headerlink" title="About gradle"></a>About gradle</h3><p>A powerful building tool, replace maven, ant, ivy…<br>PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~<br><a href="https://gradle.org" target="_blank" rel="external">Official site</a><br><a href="https://docs.gradle.org/current/userguide/userguide.html" target="_blank" rel="external">UserGuide</a><br><a href="https://gradle.org/gradle-download/" target="_blank" rel="external">Download</a></p>
-<h3 id="Install-gradle-and-config"><a href="#Install-gradle-and-config" class="headerlink" title="Install gradle and config"></a>Install gradle and config</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span><span class="keyword">install </span>gradle</div></pre></td></tr></table></figure>
-<p>然后就可以使用gradle了，为了方便管理同一版本，建议使用gradle wrapper,<br>不会依赖系统的gradle版本，<br>主要文件：<br>gradlew: 执行脚本./gradlew<br>gradlew.bat: gradlew调用<br>gradle/wrapper/gradle-wrapper.jar<br>gradle/wrapper/gradle-wrapper.properties<br>build.gradle: 设置项目的插件、依赖、gradle wrapper版本等<br>gradle.properties: 一些依赖的版本号，类似python的requirements.txt<br>主要命令：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">touch ~/.gradle/gradle<span class="selector-class">.properties</span> &amp;&amp; echo <span class="string">"org.gradle.daemon=true"</span> &gt;&gt; ~/.gradle/gradle<span class="selector-class">.properties</span></div><div class="line">./gradlew wrapper <span class="comment">// 更改build.gradle里面gradle版本后可以升级gradle</span></div><div class="line">./gradlew build <span class="comment">// build</span></div></pre></td></tr></table></figure></p>
+        <p>我不会把自己局限在互联网领域，但是目前还是最好先成为真正的full-stack engineer.<br>下面分别说下不同部分的target and target，一个模块玩腻的话换一个部分试试:)<br>Updating…</p>
+<h3 id="Java-Ecosystem"><a href="#Java-Ecosystem" class="headerlink" title="Java Ecosystem"></a>Java Ecosystem</h3><p>主要是Spring框架系列，及涉及到的web、计算、数据部分，还有不明觉厉的scala、groovy等；<br>Note: 快速和敏捷开发，and有很好的架构基础</p>
+<ul>
+<li>Spring series<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Spring</span> <span class="keyword">Boot</span></div><div class="line"><span class="symbol">Spring</span> Framework</div><div class="line"><span class="symbol">Spring</span> <span class="meta">Data</span></div><div class="line"><span class="symbol">Spring</span> Cloud(TODO)</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <a id="more"></a>
-<h3 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle"></a>build.gradle</h3><figure class="highlight puppet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">apply plugin: <span class="string">'java'</span></div><div class="line"></div><div class="line"><span class="keyword">repositories</span> &#123;</div><div class="line">    mavenCentral()</div><div class="line">    // <span class="keyword">and</span> optionally...</div><div class="line">    maven &#123; url <span class="string">"http://repo.spring.io/release"</span> &#125;</div><div class="line">    // <span class="keyword">maven</span> &#123; url <span class="string">"http://repo.spring.io/milestone"</span> &#125;</div><div class="line">    // <span class="keyword">maven</span> &#123; url <span class="string">"http://repo.spring.io/snapshot"</span> &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">dependencies</span> &#123;</div><div class="line">    // spring-<span class="literal">context</span> depends on spring-core, spring-beans...</div><div class="line">    compile(<span class="string">"org.springframework:spring-context:4.3.4.RELEASE"</span>)</div><div class="line">    testCompile(<span class="string">"org.springframework:spring-test:4.3.4.RELEASE"</span>)</div><div class="line">&#125;</div><div class="line"><span class="keyword">task</span> <span class="keyword">wrapper</span>(type: Wrapper) &#123;</div><div class="line">    gradleVersion = <span class="string">'3.2.1'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="gradle-build"><a href="#gradle-build" class="headerlink" title="gradle build"></a>gradle build</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">folder tree:</div><div class="line">⇒  tree -L <span class="number">5</span> src</div><div class="line">src</div><div class="line">└── main</div><div class="line">    └── java</div><div class="line">        └── me</div><div class="line">            └── kerol</div><div class="line">                ├── Hello<span class="selector-class">.java</span></div><div class="line">                └── World<span class="selector-class">.java</span></div><div class="line">⇒  gradle build</div><div class="line">⇒  tree -L <span class="number">6</span> build</div><div class="line">build</div><div class="line">├── classes</div><div class="line">│   └── main</div><div class="line">│       └── me</div><div class="line">│           └── kerol</div><div class="line">│               ├── Hello<span class="selector-class">.class</span></div><div class="line">│               └── World<span class="selector-class">.class</span></div><div class="line">├── dependency-cache</div><div class="line">├── libs</div><div class="line">    └── demo<span class="selector-class">.jar</span></div><div class="line">⇒  java -cp build/classes/main/ me<span class="selector-class">.kerol</span><span class="selector-class">.Hello</span></div><div class="line">Hello World!</div></pre></td></tr></table></figure>
+<h3 id="Python-Ecosystem"><a href="#Python-Ecosystem" class="headerlink" title="Python Ecosystem"></a>Python Ecosystem</h3><p>目前主要是基于Flask框架的开发工作，工作和上面Java的分布差不多<br>Note: 合适的是最好的</p>
+<ul>
+<li>Flask series<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Flask RESTful API</div><div class="line"><span class="keyword">Bootstrap </span><span class="keyword">and </span><span class="keyword">Jinja2 </span>Template</div><div class="line">MySQL <span class="keyword">and </span>Redis</div><div class="line">Other working</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="Frontend-Ecosystem"><a href="#Frontend-Ecosystem" class="headerlink" title="Frontend Ecosystem"></a>Frontend Ecosystem</h3><p>前端的基础H5、CSS、Js基础需要逐步完善，有部分主流的框架，如Vuejs，React，Requirejs等;<br>Note: 这部分的效率更需要提高<br><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Basis:</span> H5, CSS, Js</div><div class="line"><span class="symbol">JQuery:</span> widespread, old <span class="keyword">and</span> still alive</div><div class="line"><span class="symbol">Vuejs:</span> progressive data driven</div><div class="line">React Native: mobile</div><div class="line"><span class="symbol">Requirejs:</span> modular job</div></pre></td></tr></table></figure></p>
+<h3 id="Working-and-Relationship"><a href="#Working-and-Relationship" class="headerlink" title="Working and Relationship"></a>Working and Relationship</h3><p>很宽泛的说：都是人力资源管理^_^, 包括对自己，amazing<br>看了一下阿里的某本书，好像有点道理的样子zz，站在HR的角度来思考各种工作、团队、管理、人际关系等等;<br>我不会再对什么看起来不合理无理的需求有什么感觉Hah，不同时间不同情况下的不同产物<br>效率和投入产出比，，，去思考3分钟<br>To be optimized, and you should change yourself any time and any where<br>Not self-centered, but groups surrounding one piece~<br>(BGM: “You” by Approaching Nirvana)</p>
+<h3 id="Time-and-Life"><a href="#Time-and-Life" class="headerlink" title="Time and Life"></a>Time and Life</h3><p>上帝给了两件礼物：时间和思想，再给3分钟脑补下…<br>之前说过形式化和仪式感，简单规律的生活节奏<br>很多事情难在坚持：读书、健身、阅读、观察、思考、行动、repeat<br>Just day day up!<br>and it is not time to “enjoy” and keep running really,<br>finance freedom is not the terminal but just one of the milestones(yeah, I konw this word).<br>And glad to come across you, Merry Christmas! 🎄🎄🎄</p>
 
       
     </div>
@@ -299,13 +311,13 @@ Install gradle and config1brew install gradle
   
     
     <div class="copyright">
-        <p><span>Title:</span><a href="/2016/12/12/gradle构建Spring项目/">gradle构建Spring项目</a></p>
+        <p><span>Title:</span><a href="/2016/12/24/From2016To2017/">From2016-&gt;2017</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Kerol Gao</a></p>
-        <p><span>Created:</span>2016-12-12, 00:18:17</p>
-        <p><span>Updated:</span>2016-12-15, 02:00:15</p>
+        <p><span>Created:</span>2016-12-24, 16:34:54</p>
+        <p><span>Updated:</span>2016-12-24, 17:33:01</p>
         <p>
-            <span>Full URL:</span><a class="post-url" href="/2016/12/12/gradle构建Spring项目/" title="gradle构建Spring项目">http://kerol.me/2016/12/12/gradle构建Spring项目/</a>
-            <span class="copy-path" data-clipboard-text="From http://kerol.me/2016/12/12/gradle构建Spring项目/　　By Kerol Gao" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2016/12/24/From2016To2017/" title="From2016-&gt;2017">http://kerol.me/2016/12/24/From2016To2017/</a>
+            <span class="copy-path" data-clipboard-text="From http://kerol.me/2016/12/24/From2016To2017/　　By Kerol Gao" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -318,15 +330,15 @@ Install gradle and config1brew install gradle
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/24/From2016To2017/">
-                    From2016-&gt;2017
+                <a href="/2016/12/25/study-resources/">
+                    study-resources
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/09/吾日三省吾身/">
-                    吾日三省吾身
+                <a href="/2016/12/12/gradle构建Spring项目/">
+                    gradle构建Spring项目
                 </a>
             </div>
         
@@ -338,7 +350,7 @@ Install gradle and config1brew install gradle
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#About-gradle"><span class="toc-number">1.</span> <span class="toc-text">About gradle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-gradle-and-config"><span class="toc-number">2.</span> <span class="toc-text">Install gradle and config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#build-gradle"><span class="toc-number">3.</span> <span class="toc-text">build.gradle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gradle-build"><span class="toc-number">4.</span> <span class="toc-text">gradle build</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Java-Ecosystem"><span class="toc-number">1.</span> <span class="toc-text">Java Ecosystem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python-Ecosystem"><span class="toc-number">2.</span> <span class="toc-text">Python Ecosystem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Frontend-Ecosystem"><span class="toc-number">3.</span> <span class="toc-text">Frontend Ecosystem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Working-and-Relationship"><span class="toc-number">4.</span> <span class="toc-text">Working and Relationship</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Time-and-Life"><span class="toc-number">5.</span> <span class="toc-text">Time and Life</span></a></li></ol>
         
     </div>
     <style>
@@ -374,7 +386,7 @@ Install gradle and config1brew install gradle
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"gradle构建Spring项目　| Kerol Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"From2016->2017　| Kerol Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -394,7 +406,7 @@ Install gradle and config1brew install gradle
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/12/24/From2016To2017/" title="Pre: From2016-&gt;2017">
+            <a href="/2016/12/25/study-resources/" title="Pre: study-resources">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -402,7 +414,7 @@ Install gradle and config1brew install gradle
         <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/12/09/吾日三省吾身/" title="Next: 吾日三省吾身">
+            <a href="/2016/12/12/gradle构建Spring项目/" title="Next: gradle构建Spring项目">
                 <i class="fa fa-angle-right"></i>
             </a>
         
