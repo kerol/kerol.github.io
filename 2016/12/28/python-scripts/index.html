@@ -9,16 +9,17 @@
 <meta name="author" content="Kerol Gao" />
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kerol Blog">
-<meta property="og:url" content="http://kerol.me/page/2/index.html">
+<meta name="description" content="Networkingip and int123456789101112131415161718&amp;gt;&amp;gt;&amp;gt; a = &apos;192.168.0.1&apos;&amp;gt;&amp;gt;&amp;gt; import socket&amp;gt;&amp;gt;&amp;gt; import struct&amp;gt;&amp;gt;&amp;gt; b = socket.inet_aton(a)&amp;gt;&amp;gt;&amp;gt; b&apos;\xc0\xa8\x00\x01&apos;&amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python-scripts">
+<meta property="og:url" content="http://kerol.me/2016/12/28/python-scripts/index.html">
 <meta property="og:site_name" content="Kerol Blog">
+<meta property="og:description" content="Networkingip and int123456789101112131415161718&amp;gt;&amp;gt;&amp;gt; a = &apos;192.168.0.1&apos;&amp;gt;&amp;gt;&amp;gt; import socket&amp;gt;&amp;gt;&amp;gt; import struct&amp;gt;&amp;gt;&amp;gt; b = socket.inet_aton(a)&amp;gt;&amp;gt;&amp;gt; b&apos;\xc0\xa8\x00\x01&apos;&amp;gt">
+<meta property="og:updated_time" content="2016-12-28T01:54:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kerol Blog">
+<meta name="twitter:title" content="python-scripts">
+<meta name="twitter:description" content="Networkingip and int123456789101112131415161718&amp;gt;&amp;gt;&amp;gt; a = &apos;192.168.0.1&apos;&amp;gt;&amp;gt;&amp;gt; import socket&amp;gt;&amp;gt;&amp;gt; import struct&amp;gt;&amp;gt;&amp;gt; b = socket.inet_aton(a)&amp;gt;&amp;gt;&amp;gt; b&apos;\xc0\xa8\x00\x01&apos;&amp;gt">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -46,13 +47,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Kerol Blog</title>
+<title>python-scripts | Kerol Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -61,8 +60,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -240,13 +239,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-gradle构建Spring项目" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-python-scripts" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/12/gradle构建Spring项目/" class="article-date">
-      <time datetime="2016-12-11T16:18:17.000Z" itemprop="datePublished">2016-12-12</time>
+      <a href="/2016/12/28/python-scripts/" class="article-date">
+      <time datetime="2016-12-28T01:52:10.000Z" itemprop="datePublished">2016-12-28</time>
 </a>
 
 
@@ -260,191 +257,147 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/12/gradle构建Spring项目/">gradle构建Spring项目</a>
+    <h1 class="article-title" itemprop="name">
+      python-scripts
     </h1>
   
 
       </header>
       
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h3 id="About-gradle"><a href="#About-gradle" class="headerlink" title="About gradle"></a>About gradle</h3><p>A powerful building tool, replace maven, ant, ivy…<br>PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~<br><a href="https://gradle.org">Official site</a><br><a href="https://docs.gradle.org/current/userguide/userguide.html">UserGuide</a><br><a href="https://gradle.org/gradle-download/">Download</a></p>
-<h3 id="Install-gradle-and-config"><a href="#Install-gradle-and-config" class="headerlink" title="Install gradle and config"></a>Install gradle and config</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span><span class="keyword">install </span>gradle</div></pre></td></tr></table></figure>
-<p>然后就可以使用gradle了，为了方便管理同一版本，建议使用gradle wrapper,<br>不会依赖系统的gradle版本，<br>主要文件：<br>gradlew: 执行脚本./gradlew<br>gradlew.bat: gradlew调用<br>gradle/wrapper/gradle-wrapper.jar<br>gradle/wrapper/gradle-wrapper.properties<br>build.gradle: 设置项目的插件、依赖、gradle wrapper版本等<br>gradle.properties: 一些依赖的版本号，类似python的requirements.txt<br>主要命令：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">touch ~/.gradle/gradle<span class="selector-class">.properties</span> &amp;&amp; echo <span class="string">"org.gradle.daemon=true"</span> &gt;&gt; ~/.gradle/gradle<span class="selector-class">.properties</span></div><div class="line">./gradlew wrapper <span class="comment">// 更改build.gradle里面gradle版本后可以升级gradle</span></div><div class="line">./gradlew build <span class="comment">// build</span></div></pre></td></tr></table></figure></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/12/12/gradle构建Spring项目/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-吾日三省吾身" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/09/吾日三省吾身/" class="article-date">
-      <time datetime="2016-12-09T04:39:44.000Z" itemprop="datePublished">2016-12-09</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+      <div class="article-info article-info-post">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/09/吾日三省吾身/">吾日三省吾身</a>
-    </h1>
-  
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h3 id="吾日三省吾身"><a href="#吾日三省吾身" class="headerlink" title="吾日三省吾身"></a>吾日三省吾身</h3><p>1、我是来博客反省的，1，2，3<br>2、因为程序出了一点bug，对自己要求太低~<br>3、2016年又快过完了，，，不想说这句话。。。<br>4、简单高效(搞笑)到爆炸💥<br>5、还有其他的一些东西<br>6、来玩跨界吧！<br>7、Actions speak louder than words.</p>
-<p>2016-12-09 by kerol</p>
-<h3 id="2016-12-10-update"><a href="#2016-12-10-update" class="headerlink" title="2016-12-10 update"></a>2016-12-10 update</h3>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/thinking/">thinking</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/12/09/吾日三省吾身/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Encryption-and-Decryption" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/27/Encryption-and-Decryption/" class="article-date">
-      <time datetime="2016-08-27T03:48:42.000Z" itemprop="datePublished">2016-08-27</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/27/Encryption-and-Decryption/">Encryption and Decryption</a>
-    </h1>
-  
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
 
-      </header>
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
       
           
-              <p>最近对接各家支付，加密方式和流程眼花缭乱，有空总结下加密方式和处理流程，包括但不限于AES、RSA、SHA、MD5、BASE64等。<br>由于时间和篇幅限制，只用Python语言做示例，Java的代码篇幅太大，一般PHP都有示例代码，毕竟是世界上最好的编程语言，<br>喝杯Java冷静下。。。</p>
-<h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h3><p>pycrypto[<a href="https://www.dlitz.net/software/pycrypto/api/current/">https://www.dlitz.net/software/pycrypto/api/current/</a>]<br>不太清楚CentOS服务器上的swig问题，Mac遇到的问题解决:<br>stackoverflow[<a href="http://stackoverflow.com/questions/33005354/">http://stackoverflow.com/questions/33005354/</a>]<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">pip</span> install crypto # trouble comes here?</div><div class="line"><span class="keyword">brew </span>install openssl</div><div class="line"><span class="keyword">brew </span>install <span class="keyword">swig</div><div class="line"></span><span class="symbol">env</span> LDFLAGS=<span class="string">"-L$(brew --prefix openssl)/lib"</span> \</div><div class="line"><span class="symbol">CFLAGS</span>=<span class="string">"-I$(brew --prefix openssl)/include"</span> \</div><div class="line"><span class="keyword">SWIG_FEATURES="-cpperraswarn </span>-includeall -I$(<span class="keyword">brew </span>--prefix openssl)/<span class="meta">include</span><span class="string">" \</span></div></pre></td></tr></table></figure></p>
-<h3 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h3>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
+        <h2 id="Networking"><a href="#Networking" class="headerlink" title="Networking"></a>Networking</h2><h4 id="ip-and-int"><a href="#ip-and-int" class="headerlink" title="ip and int"></a>ip and int</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; a = <span class="string">'192.168.0.1'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; import socket</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; import struct</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b = socket.inet_aton(a)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b</div><div class="line"><span class="string">'\xc0\xa8\x00\x01'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c = struct.unpack(<span class="string">'!I'</span>, b)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c</div><div class="line">(<span class="number">3232235521</span>,)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c = struct.unpack(<span class="string">'!I'</span>, b)[<span class="number">0</span>]</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c</div><div class="line"><span class="number">3232235521</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; d = struct.pack(<span class="string">'!I'</span>, c)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; d</div><div class="line"><span class="string">'\xc0\xa8\x00\x01'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; e = socket.inet_ntoa(d)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; e</div><div class="line"><span class="string">'192.168.0.1'</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
 
       
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encrypt/">encrypt</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/08/27/Encryption-and-Decryption/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
     </div>
     
   </div>
   
-</article>
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/12/28/python-scripts/">python-scripts</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Kerol Gao</a></p>
+        <p><span>发布时间:</span>2016-12-28, 09:52:10</p>
+        <p><span>最后更新:</span>2016-12-28, 09:54:57</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/12/28/python-scripts/" title="python-scripts">http://kerol.me/2016/12/28/python-scripts/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://kerol.me/2016/12/28/python-scripts/　　作者: Kerol Gao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
 
 
 
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/12/25/study-resources/">
+                    study-resources
+                </a>
+            </div>
+        
     </nav>
+
   
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Networking"><span class="toc-number">1.</span> <span class="toc-text">Networking</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ip-and-int"><span class="toc-number">1.0.1.</span> <span class="toc-text">ip and int</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"python-scripts　| Kerol Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/12/25/study-resources/" title="下一篇: study-resources">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/28/python-scripts/">python-scripts</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/25/study-resources/">study-resources</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/24/From2016To2017/">From2016->2017</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/12/gradle构建Spring项目/">gradle构建Spring项目</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/09/吾日三省吾身/">吾日三省吾身</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/27/Encryption-and-Decryption/">Encryption and Decryption</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/31/Spring-in-Action-Ch2-装配bean/">Spring in Action Ch2: 装配bean</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/Spring-ref-Part-2-Ch-7-IoC-container/">Spring-ref Part 2 Ch 7: IoC container</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/28/Spring-ref-Part-2-Core-Technologies/">Spring-ref Part 2 Core Technologies</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/27/Spring-ref-Part-1-Ch-2-Introduction-to-Spring/">Spring-ref Part 1 Ch 2: Introduction to Spring</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/27/Spring-ref-Part-1-Ch-1-Getting-Started/">Spring-ref Part 1 Ch 1: Getting Started with Spring</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/27/Spring-ref-Part-1-Overview-of-Spring-Framework/">Spring ref Part 1: Overview of Spring Framework</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/07/26/开始写博客/">开始写博客</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
