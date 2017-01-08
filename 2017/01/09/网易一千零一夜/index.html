@@ -10,22 +10,16 @@
 
 
 
-<meta name="description" content="About gradleA powerful building tool, replace maven, ant, ivy…PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~Official siteUserGuideDownload
-Install gradle and config1brew install gradle
-然后就可以使用gradle了，为">
+<meta name="description" content="前言主题是网易在差不多三年的时间积累的关于项目管理的经验和方案。网易杭研PMO部门在网易多个项目如何选择不同的项目管理方案。本书主要分为4章，第1章我是项目经理介绍了了项目经理的基本工作以及如何做好，第2章高度延伸从有效管理和提升的角度，思考了各个阶段项目经理实操工作背后的深层原则和思路，第3章宽度扩展讲述了项目管理和业务结合实战的过程中的一些工具和武器，第4章深度修炼借着小鱼儿的故事讲述了项目经">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gradle构建Spring项目">
-<meta property="og:url" content="http://kerol.me/2016/12/12/gradle构建Spring项目/index.html">
+<meta property="og:title" content="阅读：网易一千零一夜">
+<meta property="og:url" content="http://kerol.me/2017/01/09/网易一千零一夜/index.html">
 <meta property="og:site_name" content="Kerol Blog">
-<meta property="og:description" content="About gradleA powerful building tool, replace maven, ant, ivy…PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~Official siteUserGuideDownload
-Install gradle and config1brew install gradle
-然后就可以使用gradle了，为">
-<meta property="og:updated_time" content="2016-12-14T18:00:15.000Z">
+<meta property="og:description" content="前言主题是网易在差不多三年的时间积累的关于项目管理的经验和方案。网易杭研PMO部门在网易多个项目如何选择不同的项目管理方案。本书主要分为4章，第1章我是项目经理介绍了了项目经理的基本工作以及如何做好，第2章高度延伸从有效管理和提升的角度，思考了各个阶段项目经理实操工作背后的深层原则和思路，第3章宽度扩展讲述了项目管理和业务结合实战的过程中的一些工具和武器，第4章深度修炼借着小鱼儿的故事讲述了项目经">
+<meta property="og:updated_time" content="2017-01-08T19:19:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gradle构建Spring项目">
-<meta name="twitter:description" content="About gradleA powerful building tool, replace maven, ant, ivy…PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~Official siteUserGuideDownload
-Install gradle and config1brew install gradle
-然后就可以使用gradle了，为">
+<meta name="twitter:title" content="阅读：网易一千零一夜">
+<meta name="twitter:description" content="前言主题是网易在差不多三年的时间积累的关于项目管理的经验和方案。网易杭研PMO部门在网易多个项目如何选择不同的项目管理方案。本书主要分为4章，第1章我是项目经理介绍了了项目经理的基本工作以及如何做好，第2章高度延伸从有效管理和提升的角度，思考了各个阶段项目经理实操工作背后的深层原则和思路，第3章宽度扩展讲述了项目管理和业务结合实战的过程中的一些工具和武器，第4章深度修炼借着小鱼儿的故事讲述了项目经">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +51,7 @@ Install gradle and config1brew install gradle
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>gradle构建Spring项目 | Kerol Blog</title>
+<title>阅读：网易一千零一夜 | Kerol Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -245,11 +239,11 @@ Install gradle and config1brew install gradle
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-gradle构建Spring项目" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-网易一千零一夜" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/12/gradle构建Spring项目/" class="article-date">
-      <time datetime="2016-12-11T16:18:17.000Z" itemprop="datePublished">2016-12-12</time>
+      <a href="/2017/01/09/网易一千零一夜/" class="article-date">
+      <time datetime="2017-01-08T19:03:56.000Z" itemprop="datePublished">2017-01-09</time>
 </a>
 
 
@@ -264,7 +258,7 @@ Install gradle and config1brew install gradle
         
   
     <h1 class="article-title" itemprop="name">
-      gradle构建Spring项目
+      阅读：网易一千零一夜
     </h1>
   
 
@@ -275,7 +269,7 @@ Install gradle and config1brew install gradle
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reading/">reading</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -285,13 +279,8 @@ Install gradle and config1brew install gradle
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="About-gradle"><a href="#About-gradle" class="headerlink" title="About gradle"></a>About gradle</h3><p>A powerful building tool, replace maven, ant, ivy…<br>PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~<br><a href="https://gradle.org" target="_blank" rel="external">Official site</a><br><a href="https://docs.gradle.org/current/userguide/userguide.html" target="_blank" rel="external">UserGuide</a><br><a href="https://gradle.org/gradle-download/" target="_blank" rel="external">Download</a></p>
-<h3 id="Install-gradle-and-config"><a href="#Install-gradle-and-config" class="headerlink" title="Install gradle and config"></a>Install gradle and config</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span><span class="keyword">install </span>gradle</div></pre></td></tr></table></figure>
-<p>然后就可以使用gradle了，为了方便管理同一版本，建议使用gradle wrapper,<br>不会依赖系统的gradle版本，<br>主要文件：<br>gradlew: 执行脚本./gradlew<br>gradlew.bat: gradlew调用<br>gradle/wrapper/gradle-wrapper.jar<br>gradle/wrapper/gradle-wrapper.properties<br>build.gradle: 设置项目的插件、依赖、gradle wrapper版本等<br>gradle.properties: 一些依赖的版本号，类似python的requirements.txt<br>主要命令：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">touch ~/.gradle/gradle<span class="selector-class">.properties</span> &amp;&amp; echo <span class="string">"org.gradle.daemon=true"</span> &gt;&gt; ~/.gradle/gradle<span class="selector-class">.properties</span></div><div class="line">./gradlew wrapper <span class="comment">// 更改build.gradle里面gradle版本后可以升级gradle</span></div><div class="line">./gradlew build <span class="comment">// build</span></div></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h3 id="build-gradle"><a href="#build-gradle" class="headerlink" title="build.gradle"></a>build.gradle</h3><figure class="highlight puppet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">apply plugin: <span class="string">'java'</span></div><div class="line"></div><div class="line"><span class="keyword">repositories</span> &#123;</div><div class="line">    mavenCentral()</div><div class="line">    // <span class="keyword">and</span> optionally...</div><div class="line">    maven &#123; url <span class="string">"http://repo.spring.io/release"</span> &#125;</div><div class="line">    // <span class="keyword">maven</span> &#123; url <span class="string">"http://repo.spring.io/milestone"</span> &#125;</div><div class="line">    // <span class="keyword">maven</span> &#123; url <span class="string">"http://repo.spring.io/snapshot"</span> &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">dependencies</span> &#123;</div><div class="line">    // spring-<span class="literal">context</span> depends on spring-core, spring-beans...</div><div class="line">    compile(<span class="string">"org.springframework:spring-context:4.3.4.RELEASE"</span>)</div><div class="line">    testCompile(<span class="string">"org.springframework:spring-test:4.3.4.RELEASE"</span>)</div><div class="line">&#125;</div><div class="line"><span class="keyword">task</span> <span class="keyword">wrapper</span>(type: Wrapper) &#123;</div><div class="line">    gradleVersion = <span class="string">'3.2.1'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="gradle-build"><a href="#gradle-build" class="headerlink" title="gradle build"></a>gradle build</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">folder tree:</div><div class="line">⇒  tree -L <span class="number">5</span> src</div><div class="line">src</div><div class="line">└── main</div><div class="line">    └── java</div><div class="line">        └── me</div><div class="line">            └── kerol</div><div class="line">                ├── Hello<span class="selector-class">.java</span></div><div class="line">                └── World<span class="selector-class">.java</span></div><div class="line">⇒  gradle build</div><div class="line">⇒  tree -L <span class="number">6</span> build</div><div class="line">build</div><div class="line">├── classes</div><div class="line">│   └── main</div><div class="line">│       └── me</div><div class="line">│           └── kerol</div><div class="line">│               ├── Hello<span class="selector-class">.class</span></div><div class="line">│               └── World<span class="selector-class">.class</span></div><div class="line">├── dependency-cache</div><div class="line">├── libs</div><div class="line">    └── demo<span class="selector-class">.jar</span></div><div class="line">⇒  java -cp build/classes/main/ me<span class="selector-class">.kerol</span><span class="selector-class">.Hello</span></div><div class="line">Hello World!</div></pre></td></tr></table></figure>
-
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>主题是网易在差不多三年的时间积累的关于项目管理的经验和方案。<br>网易杭研PMO部门在网易多个项目如何选择不同的项目管理方案。<br>本书主要分为4章，第1章我是项目经理介绍了了项目经理的基本工作以及如何做好，<br>第2章高度延伸从有效管理和提升的角度，思考了各个阶段项目经理实操工作背后的深层原则和思路，<br>第3章宽度扩展讲述了项目管理和业务结合实战的过程中的一些工具和武器，<br>第4章深度修炼借着小鱼儿的故事讲述了项目经理如何在成长的过程中自我修炼、提升管理能力、提升核心竞争力、困境中突破自己等。<br><a id="more"></a></p>
+<h3 id="第1章-我是项目经理"><a href="#第1章-我是项目经理" class="headerlink" title="第1章 我是项目经理"></a>第1章 我是项目经理</h3><h3 id="第2章-高度延伸"><a href="#第2章-高度延伸" class="headerlink" title="第2章 高度延伸"></a>第2章 高度延伸</h3><h3 id="第3章-宽度扩展"><a href="#第3章-宽度扩展" class="headerlink" title="第3章 宽度扩展"></a>第3章 宽度扩展</h3><h3 id="第4章-深度修炼"><a href="#第4章-深度修炼" class="headerlink" title="第4章 深度修炼"></a>第4章 深度修炼</h3>
       
     </div>
     
@@ -299,13 +288,13 @@ Install gradle and config1brew install gradle
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/12/12/gradle构建Spring项目/">gradle构建Spring项目</a></p>
+        <p><span>本文标题:</span><a href="/2017/01/09/网易一千零一夜/">阅读：网易一千零一夜</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Kerol Gao</a></p>
-        <p><span>发布时间:</span>2016-12-12, 00:18:17</p>
-        <p><span>最后更新:</span>2016-12-15, 02:00:15</p>
+        <p><span>发布时间:</span>2017-01-09, 03:03:56</p>
+        <p><span>最后更新:</span>2017-01-09, 03:19:12</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/12/12/gradle构建Spring项目/" title="gradle构建Spring项目">http://kerol.me/2016/12/12/gradle构建Spring项目/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://kerol.me/2016/12/12/gradle构建Spring项目/　　作者: Kerol Gao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/01/09/网易一千零一夜/" title="阅读：网易一千零一夜">http://kerol.me/2017/01/09/网易一千零一夜/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://kerol.me/2017/01/09/网易一千零一夜/　　作者: Kerol Gao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -317,16 +306,10 @@ Install gradle and config1brew install gradle
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/24/From2016To2017/">
-                    From2016-&gt;2017
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/09/吾日三省吾身/">
-                    吾日三省吾身
+                <a href="/2017/01/09/reading2017/">
+                    reading2017
                 </a>
             </div>
         
@@ -338,7 +321,7 @@ Install gradle and config1brew install gradle
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#About-gradle"><span class="toc-number">1.</span> <span class="toc-text">About gradle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-gradle-and-config"><span class="toc-number">2.</span> <span class="toc-text">Install gradle and config</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#build-gradle"><span class="toc-number">3.</span> <span class="toc-text">build.gradle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gradle-build"><span class="toc-number">4.</span> <span class="toc-text">gradle build</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第1章-我是项目经理"><span class="toc-number">2.</span> <span class="toc-text">第1章 我是项目经理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第2章-高度延伸"><span class="toc-number">3.</span> <span class="toc-text">第2章 高度延伸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第3章-宽度扩展"><span class="toc-number">4.</span> <span class="toc-text">第3章 宽度扩展</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第4章-深度修炼"><span class="toc-number">5.</span> <span class="toc-text">第4章 深度修炼</span></a></li></ol>
         
     </div>
     <style>
@@ -374,7 +357,7 @@ Install gradle and config1brew install gradle
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"gradle构建Spring项目　| Kerol Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"阅读：网易一千零一夜　| Kerol Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -394,15 +377,13 @@ Install gradle and config1brew install gradle
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/12/24/From2016To2017/" title="上一篇: From2016-&gt;2017">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/12/09/吾日三省吾身/" title="下一篇: 吾日三省吾身">
+            <a href="/2017/01/09/reading2017/" title="下一篇: reading2017">
                 <i class="fa fa-angle-right"></i>
             </a>
         

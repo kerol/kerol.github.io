@@ -171,7 +171,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li></ul>
                     </div>
                 </section>
                 
@@ -241,6 +241,138 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-吾日三省吾身" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/09/吾日三省吾身/" class="article-date">
+      <time datetime="2016-12-09T04:39:44.000Z" itemprop="datePublished">2016-12-09</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/09/吾日三省吾身/">吾日三省吾身</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="吾日三省吾身"><a href="#吾日三省吾身" class="headerlink" title="吾日三省吾身"></a>吾日三省吾身</h3><p>1、我是来博客反省的，1，2，3<br>2、因为程序出了一点bug，对自己要求太低~<br>3、2016年又快过完了，，，不想说这句话。。。<br>4、简单高效(搞笑)到爆炸💥<br>5、还有其他的一些东西<br>6、来玩跨界吧！<br>7、Actions speak louder than words.</p>
+<p>2016-12-09 by kerol</p>
+<h3 id="2016-12-10-update"><a href="#2016-12-10-update" class="headerlink" title="2016-12-10 update"></a>2016-12-10 update</h3>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/thinking/">thinking</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/12/09/吾日三省吾身/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-Encryption-and-Decryption" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/08/27/Encryption-and-Decryption/" class="article-date">
+      <time datetime="2016-08-27T03:48:42.000Z" itemprop="datePublished">2016-08-27</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/27/Encryption-and-Decryption/">Encryption and Decryption</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>最近对接各家支付，加密方式和流程眼花缭乱，有空总结下加密方式和处理流程，包括但不限于AES、RSA、SHA、MD5、BASE64等。<br>由于时间和篇幅限制，只用Python语言做示例，Java的代码篇幅太大，一般PHP都有示例代码，毕竟是世界上最好的编程语言，<br>喝杯Java冷静下。。。</p>
+<h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h3><p>pycrypto[<a href="https://www.dlitz.net/software/pycrypto/api/current/">https://www.dlitz.net/software/pycrypto/api/current/</a>]<br>不太清楚CentOS服务器上的swig问题，Mac遇到的问题解决:<br>stackoverflow[<a href="http://stackoverflow.com/questions/33005354/">http://stackoverflow.com/questions/33005354/</a>]<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">pip</span> install crypto # trouble comes here?</div><div class="line"><span class="keyword">brew </span>install openssl</div><div class="line"><span class="keyword">brew </span>install <span class="keyword">swig</div><div class="line"></span><span class="symbol">env</span> LDFLAGS=<span class="string">"-L$(brew --prefix openssl)/lib"</span> \</div><div class="line"><span class="symbol">CFLAGS</span>=<span class="string">"-I$(brew --prefix openssl)/include"</span> \</div><div class="line"><span class="keyword">SWIG_FEATURES="-cpperraswarn </span>-includeall -I$(<span class="keyword">brew </span>--prefix openssl)/<span class="meta">include</span><span class="string">" \</span></div></pre></td></tr></table></figure></p>
+<h3 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h3>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encrypt/">encrypt</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/08/27/Encryption-and-Decryption/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Spring-in-Action-Ch2-装配bean" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -319,134 +451,6 @@
 
 
   
-    <article id="post-Spring-ref-Part-2-Ch-7-IoC-container" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/28/Spring-ref-Part-2-Ch-7-IoC-container/" class="article-date">
-      <time datetime="2016-07-28T08:04:04.000Z" itemprop="datePublished">2016-07-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/28/Spring-ref-Part-2-Ch-7-IoC-container/">Spring-ref Part 2 Ch 7: IoC container</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="Spring-IoC-容器及beans介绍"><a href="#Spring-IoC-容器及beans介绍" class="headerlink" title="Spring IoC 容器及beans介绍"></a>Spring IoC 容器及beans介绍</h3><p>这一章包括Spring IoC容器的原理。IoC也被称为依赖注入DI（注：还是有点区别的）。在创建bean的时候，IoC容器注入依赖。<br>org.springframework.beans and org.springframework.context包是Spring Ioc容器的基础。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-ref/">spring-ref</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Spring-ref-Part-2-Core-Technologies" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/28/Spring-ref-Part-2-Core-Technologies/" class="article-date">
-      <time datetime="2016-07-28T07:36:00.000Z" itemprop="datePublished">2016-07-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/28/Spring-ref-Part-2-Core-Technologies/">Spring-ref Part 2 Core Technologies</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="Core-Technologies"><a href="#Core-Technologies" class="headerlink" title="Core Technologies"></a>Core Technologies</h3><p>该部分是Spring框架绝对不可或缺的部分。<br>Spring的核心包括IoC以及AOP。Spring的AOP框架满足80%的Java EE AOP要求。</p>
-<ul>
-<li>Ch 7: IoC容器</li>
-<li>Ch 8: Resources</li>
-<li>Ch 9: 验证、数据绑定及类型转换</li>
-<li>Ch 10: Spring Expression语言</li>
-<li>Ch 11: AOP</li>
-<li>Ch 12: Spring AOP APIs</li>
-</ul>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-ref/">spring-ref</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
@@ -458,7 +462,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016 Kerol Gao
+                2016-2017 Kerol Gao
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
