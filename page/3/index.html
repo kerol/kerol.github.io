@@ -242,6 +242,75 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-From2016To2017" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/24/From2016To2017/" class="article-date">
+      <time datetime="2016-12-24T08:34:54.000Z" itemprop="datePublished">2016-12-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/24/From2016To2017/">From2016-&gt;2017</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>我不会把自己局限在互联网领域，但是目前还是最好先成为真正的full-stack engineer.<br>下面分别说下不同部分的target and target，一个模块玩腻的话换一个部分试试:)<br>Updating…</p>
+<h3 id="Java-Ecosystem"><a href="#Java-Ecosystem" class="headerlink" title="Java Ecosystem"></a>Java Ecosystem</h3><p>主要是Spring框架系列，及涉及到的web、计算、数据部分，还有不明觉厉的scala、groovy等；<br>Note: 快速和敏捷开发，and有很好的架构基础</p>
+<ul>
+<li>Spring series<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Spring</span> <span class="keyword">Boot</div><div class="line"></span><span class="symbol">Spring</span> Framework</div><div class="line"><span class="symbol">Spring</span> <span class="meta">Data</span></div><div class="line"><span class="symbol">Spring</span> Cloud(TODO)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/from2next/">from2next</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/12/24/From2016To2017/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-gradle构建Spring项目" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -356,72 +425,6 @@
       
         <p class="article-more-link">
           <a href="/2016/12/09/吾日三省吾身/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Encryption-and-Decryption" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/27/Encryption-and-Decryption/" class="article-date">
-      <time datetime="2016-08-27T03:48:42.000Z" itemprop="datePublished">2016-08-27</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/27/Encryption-and-Decryption/">Encryption and Decryption</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>最近对接各家支付，加密方式和流程眼花缭乱，有空总结下加密方式和处理流程，包括但不限于AES、RSA、SHA、MD5、BASE64等。<br>由于时间和篇幅限制，只用Python语言做示例，Java的代码篇幅太大，一般PHP都有示例代码，毕竟是世界上最好的编程语言，<br>喝杯Java冷静下。。。</p>
-<h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h3><p>pycrypto[<a href="https://www.dlitz.net/software/pycrypto/api/current/">https://www.dlitz.net/software/pycrypto/api/current/</a>]<br>不太清楚CentOS服务器上的swig问题，Mac遇到的问题解决:<br>stackoverflow[<a href="http://stackoverflow.com/questions/33005354/">http://stackoverflow.com/questions/33005354/</a>]<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">pip</span> install crypto # trouble comes here?</div><div class="line"><span class="keyword">brew </span>install openssl</div><div class="line"><span class="keyword">brew </span>install <span class="keyword">swig</div><div class="line"></span><span class="symbol">env</span> LDFLAGS=<span class="string">"-L$(brew --prefix openssl)/lib"</span> \</div><div class="line"><span class="symbol">CFLAGS</span>=<span class="string">"-I$(brew --prefix openssl)/include"</span> \</div><div class="line"><span class="keyword">SWIG_FEATURES="-cpperraswarn </span>-includeall -I$(<span class="keyword">brew </span>--prefix openssl)/<span class="meta">include</span><span class="string">" \</span></div></pre></td></tr></table></figure></p>
-<h3 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h3>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/encrypt/">encrypt</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/08/27/Encryption-and-Decryption/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
