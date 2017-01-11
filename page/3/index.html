@@ -171,7 +171,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/">flask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li></ul>
                     </div>
                 </section>
                 
@@ -241,6 +241,72 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-gradle构建Spring项目" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/12/gradle构建Spring项目/" class="article-date">
+      <time datetime="2016-12-11T16:18:17.000Z" itemprop="datePublished">2016-12-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/12/gradle构建Spring项目/">gradle构建Spring项目</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="About-gradle"><a href="#About-gradle" class="headerlink" title="About gradle"></a>About gradle</h3><p>A powerful building tool, replace maven, ant, ivy…<br>PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~<br><a href="https://gradle.org">Official site</a><br><a href="https://docs.gradle.org/current/userguide/userguide.html">UserGuide</a><br><a href="https://gradle.org/gradle-download/">Download</a></p>
+<h3 id="Install-gradle-and-config"><a href="#Install-gradle-and-config" class="headerlink" title="Install gradle and config"></a>Install gradle and config</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span><span class="keyword">install </span>gradle</div></pre></td></tr></table></figure>
+<p>然后就可以使用gradle了，为了方便管理同一版本，建议使用gradle wrapper,<br>不会依赖系统的gradle版本，<br>主要文件：<br>gradlew: 执行脚本./gradlew<br>gradlew.bat: gradlew调用<br>gradle/wrapper/gradle-wrapper.jar<br>gradle/wrapper/gradle-wrapper.properties<br>build.gradle: 设置项目的插件、依赖、gradle wrapper版本等<br>gradle.properties: 一些依赖的版本号，类似python的requirements.txt<br>主要命令：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">touch ~/.gradle/gradle<span class="selector-class">.properties</span> &amp;&amp; echo <span class="string">"org.gradle.daemon=true"</span> &gt;&gt; ~/.gradle/gradle<span class="selector-class">.properties</span></div><div class="line">./gradlew wrapper <span class="comment">// 更改build.gradle里面gradle版本后可以升级gradle</span></div><div class="line">./gradlew build <span class="comment">// build</span></div></pre></td></tr></table></figure></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/12/12/gradle构建Spring项目/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-吾日三省吾身" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -374,86 +440,9 @@
 
 
   
-    <article id="post-Spring-in-Action-Ch2-装配bean" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/31/Spring-in-Action-Ch2-装配bean/" class="article-date">
-      <time datetime="2016-07-31T15:02:49.000Z" itemprop="datePublished">2016-07-31</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/31/Spring-in-Action-Ch2-装配bean/">Spring in Action Ch2: 装配bean</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>在Spring中，对象无需自己查找或创建与其关联的其他对象。IOC容器负责把需要相互协作的对象引用赋予各个对象。创建应用对象之间协作关系的行为通常称为装配，这也是依赖注入的本质。</p>
-<h3 id="2-1-Spring配置的可选方案"><a href="#2-1-Spring配置的可选方案" class="headerlink" title="2.1 Spring配置的可选方案"></a>2.1 Spring配置的可选方案</h3><p>Spring容器负责应用程序中的bean并通过DI来协调这些对象之间的关系。Spring提供了三种主要的装配机制：</p>
-<ul>
-<li>在XML中进行显式配置；</li>
-<li>在Java中进行显式配置；</li>
-<li>隐式的bean发现和自动装配；  </li>
-</ul>
-<p>尽可能的使用自动配置的机制，显示配置越少越好。推荐使用类型安全并且比XML更强大的JavaConfig，只有想用便利的XML命名空间，并且JavaConfig没有同样的实现时，才应该使用XML。</p>
-<h3 id="2-2-自动化装配bean"><a href="#2-2-自动化装配bean" class="headerlink" title="2.2 自动化装配bean"></a>2.2 自动化装配bean</h3><p>Spring从两个角度来实现自动化装配：</p>
-<ul>
-<li>组件扫描：Spring会自动发现上下文中创建的bean；</li>
-<li>自动装配：自动满足bean之间的依赖关系；<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.beans</span><span class="selector-class">.factory</span><span class="selector-class">.annotation</span><span class="selector-class">.Autowired</span>;</div><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.stereotype</span><span class="selector-class">.Compoment</span>;</div><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.annotation</span><span class="selector-class">.Configuration</span>;</div><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.annotation</span><span class="selector-class">.CompomentScan</span>;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-ia/">spring-ia</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/07/31/Spring-in-Action-Ch2-装配bean/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 </div>

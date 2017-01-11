@@ -171,7 +171,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/">flask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li></ul>
                     </div>
                 </section>
                 
@@ -241,6 +241,71 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-flask-request-files" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/11/flask-request-files/" class="article-date">
+      <time datetime="2017-01-11T02:08:54.000Z" itemprop="datePublished">2017-01-11</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/11/flask-request-files/">flask-request-files</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>主要记录使用Flask框架时遇到的一些坑~</p>
+<h3 id="request-files"><a href="#request-files" class="headerlink" title="request.files"></a>request.files</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">import hashlib</div><div class="line">from flask import request</div><div class="line">file_obj = request.<span class="keyword">files</span>[<span class="string">'filename'</span>]</div><div class="line">md5_key = hashlib.md5(file_obj.<span class="keyword">read</span>()).hexdigest()</div><div class="line">file_obj.seek(<span class="number">0</span>)  # 坑就在这里，Move <span class="built_in">cursor</span> back <span class="keyword">to</span> beginning <span class="keyword">so</span> we can <span class="keyword">write</span> <span class="keyword">to</span> disk，不然file_obj会写入失败</div><div class="line">#file_obj.save(os.path.<span class="keyword">join</span>(path, filename))</div></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flask/">flask</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2017/01/11/flask-request-files/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-网易一千零一夜" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -371,73 +436,9 @@
 
 
   
-    <article id="post-python-scripts" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/12/28/python-scripts/" class="article-date">
-      <time datetime="2016-12-28T01:52:10.000Z" itemprop="datePublished">2016-12-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/28/python-scripts/">python-scripts</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="Networking"><a href="#Networking" class="headerlink" title="Networking"></a>Networking</h2><h4 id="ip-and-int"><a href="#ip-and-int" class="headerlink" title="ip and int"></a>ip and int</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; a = <span class="string">'192.168.0.1'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; import socket</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; import struct</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b = socket.inet_aton(a)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b</div><div class="line"><span class="string">'\xc0\xa8\x00\x01'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c = struct.unpack(<span class="string">'!I'</span>, b)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c</div><div class="line">(<span class="number">3232235521</span>,)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c = struct.unpack(<span class="string">'!I'</span>, b)[<span class="number">0</span>]</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c</div><div class="line"><span class="number">3232235521</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; d = struct.pack(<span class="string">'!I'</span>, c)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; d</div><div class="line"><span class="string">'\xc0\xa8\x00\x01'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; e = socket.inet_ntoa(d)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; e</div><div class="line"><span class="string">'192.168.0.1'</span></div></pre></td></tr></table></figure>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2016/12/28/python-scripts/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
