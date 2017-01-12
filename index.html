@@ -306,10 +306,10 @@
 
 
   
-    <article id="post-flask-request-files" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-flask-request" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/11/flask-request-files/" class="article-date">
+      <a href="/2017/01/11/flask-request/" class="article-date">
       <time datetime="2017-01-11T02:08:54.000Z" itemprop="datePublished">2017-01-11</time>
 </a>
 
@@ -325,7 +325,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/11/flask-request-files/">flask-request-files</a>
+      <a class="article-title" href="/2017/01/11/flask-request/">flask-request-response</a>
     </h1>
   
 
@@ -335,8 +335,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <h3 id="About"><a href="#About" class="headerlink" title="About"></a>About</h3><p>主要记录使用Flask框架时遇到的一些坑~</p>
-<h3 id="request-files"><a href="#request-files" class="headerlink" title="request.files"></a>request.files</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import os</div><div class="line">import hashlib</div><div class="line">from flask import request</div><div class="line">file_obj = request.<span class="keyword">files</span>[<span class="string">'filename'</span>]</div><div class="line">md5_key = hashlib.md5(file_obj.<span class="keyword">read</span>()).hexdigest()</div><div class="line">file_obj.seek(<span class="number">0</span>)  # 坑就在这里，Move <span class="built_in">cursor</span> back <span class="keyword">to</span> beginning <span class="keyword">so</span> we can <span class="keyword">write</span> <span class="keyword">to</span> disk，不然file_obj会写入失败</div><div class="line">#file_obj.save(os.path.<span class="keyword">join</span>(path, filename))</div></pre></td></tr></table></figure>
+              <h3 id="flask-reqeust-and-response"><a href="#flask-reqeust-and-response" class="headerlink" title="flask reqeust and response"></a>flask reqeust and response</h3><p>Http request and response object and methods.<br>
           
       
     </div>
@@ -352,7 +351,7 @@
 
       
         <p class="article-more-link">
-          <a href="/2017/01/11/flask-request-files/#more">more >></a>
+          <a href="/2017/01/11/flask-request/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
