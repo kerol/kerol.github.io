@@ -434,9 +434,338 @@
 
 
   
+    <article id="post-reading2017" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/09/reading2017/" class="article-date">
+      <time datetime="2017-01-08T18:48:08.000Z" itemprop="datePublished">2017-01-09</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/09/reading2017/">reading2017</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="2017-01-09"><a href="#2017-01-09" class="headerlink" title="2017-01-09"></a>2017-01-09</h3><p>凌晨小程序上线，看了一下朋友圈，看到一个讨论关于前端流量获利到后端购买通过ROI实现盈利的商业模式的讨论，估计是焦虑的原因，忽然间就睡不着了。。。<br>那就看书吧，然后想着总结一下2017要看的书也好。</p>
+<h3 id="2017书单"><a href="#2017书单" class="headerlink" title="2017书单"></a>2017书单</h3><p>包括实体书和kindle电子书，下面的列表会不断更新。<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reading/">reading</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2017/01/09/reading2017/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-python-scripts" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/28/python-scripts/" class="article-date">
+      <time datetime="2016-12-28T01:52:10.000Z" itemprop="datePublished">2016-12-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/28/python-scripts/">python-scripts</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="Networking"><a href="#Networking" class="headerlink" title="Networking"></a>Networking</h2><h4 id="ip-and-int"><a href="#ip-and-int" class="headerlink" title="ip and int"></a>ip and int</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; a = <span class="string">'192.168.0.1'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; import socket</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; import struct</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b = socket.inet_aton(a)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b</div><div class="line"><span class="string">'\xc0\xa8\x00\x01'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c = struct.unpack(<span class="string">'!I'</span>, b)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c</div><div class="line">(<span class="number">3232235521</span>,)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c = struct.unpack(<span class="string">'!I'</span>, b)[<span class="number">0</span>]</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c</div><div class="line"><span class="number">3232235521</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; d = struct.pack(<span class="string">'!I'</span>, c)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; d</div><div class="line"><span class="string">'\xc0\xa8\x00\x01'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; e = socket.inet_ntoa(d)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; e</div><div class="line"><span class="string">'192.168.0.1'</span></div></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/12/28/python-scripts/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-study-resources" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/25/study-resources/" class="article-date">
+      <time datetime="2016-12-25T14:31:56.000Z" itemprop="datePublished">2016-12-25</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/25/study-resources/">study-resources</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>总结了部分优秀的开源知识和框架</p>
+<h3 id="Frontend"><a href="#Frontend" class="headerlink" title="Frontend"></a>Frontend</h3><ul>
+<li><a href="https://github.com/vuejs/vue" target="_blank" rel="external">vue.js</a>: 数据驱动来操纵DOM实现视图的更新；</li>
+<li><a href="https://github.com/pagekit/vue-resource" target="_blank" rel="external">vue-resource</a>: The HTTP client for Vue.js</li>
+<li><a href="https://github.com/guillaumepotier/Parsley.js" target="_blank" rel="external">parsly.js</a>: <a href="http://parsleyjs.org/doc/index.html" target="_blank" rel="external">文档地址</a> Validate your forms, frontend, without writing a single line of javascript；</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/resources/">resources</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-From2016To2017" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/24/From2016To2017/" class="article-date">
+      <time datetime="2016-12-24T08:34:54.000Z" itemprop="datePublished">2016-12-24</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/24/From2016To2017/">From2016-&gt;2017</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <p>我不会把自己局限在互联网领域，但是目前还是最好先成为真正的full-stack engineer.<br>下面分别说下不同部分的target and target，一个模块玩腻的话换一个部分试试:)<br>Updating…</p>
+<h3 id="Java-Ecosystem"><a href="#Java-Ecosystem" class="headerlink" title="Java Ecosystem"></a>Java Ecosystem</h3><p>主要是Spring框架系列，及涉及到的web、计算、数据部分，还有不明觉厉的scala、groovy等；<br>Note: 快速和敏捷开发，and有很好的架构基础</p>
+<ul>
+<li>Spring series<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">Spring</span> <span class="keyword">Boot</div><div class="line"></span><span class="symbol">Spring</span> Framework</div><div class="line"><span class="symbol">Spring</span> <span class="meta">Data</span></div><div class="line"><span class="symbol">Spring</span> Cloud(TODO)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/from2next/">from2next</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/12/24/From2016To2017/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-gradle构建Spring项目" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/12/gradle构建Spring项目/" class="article-date">
+      <time datetime="2016-12-11T16:18:17.000Z" itemprop="datePublished">2016-12-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/12/gradle构建Spring项目/">gradle构建Spring项目</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="About-gradle"><a href="#About-gradle" class="headerlink" title="About gradle"></a>About gradle</h3><p>A powerful building tool, replace maven, ant, ivy…<br>PS: 开始玩的时候还是从命令行开始，熟悉后可以使用idea开发，对于IDE不是特别感冒~<br><a href="https://gradle.org">Official site</a><br><a href="https://docs.gradle.org/current/userguide/userguide.html">UserGuide</a><br><a href="https://gradle.org/gradle-download/">Download</a></p>
+<h3 id="Install-gradle-and-config"><a href="#Install-gradle-and-config" class="headerlink" title="Install gradle and config"></a>Install gradle and config</h3><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">brew </span><span class="keyword">install </span>gradle</div></pre></td></tr></table></figure>
+<p>然后就可以使用gradle了，为了方便管理同一版本，建议使用gradle wrapper,<br>不会依赖系统的gradle版本，<br>主要文件：<br>gradlew: 执行脚本./gradlew<br>gradlew.bat: gradlew调用<br>gradle/wrapper/gradle-wrapper.jar<br>gradle/wrapper/gradle-wrapper.properties<br>build.gradle: 设置项目的插件、依赖、gradle wrapper版本等<br>gradle.properties: 一些依赖的版本号，类似python的requirements.txt<br>主要命令：<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">touch ~/.gradle/gradle<span class="selector-class">.properties</span> &amp;&amp; echo <span class="string">"org.gradle.daemon=true"</span> &gt;&gt; ~/.gradle/gradle<span class="selector-class">.properties</span></div><div class="line">./gradlew wrapper <span class="comment">// 更改build.gradle里面gradle版本后可以升级gradle</span></div><div class="line">./gradlew build <span class="comment">// build</span></div></pre></td></tr></table></figure></p>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gradle/">gradle</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/12/12/gradle构建Spring项目/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
