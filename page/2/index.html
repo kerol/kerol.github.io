@@ -171,7 +171,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/about/">about</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/">flask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hack/">hack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pypa/">pypa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travis/">travis</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/about/">about</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/">flask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hack/">hack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/market/">market</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pypa/">pypa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travis/">travis</a></li></ul>
                     </div>
                 </section>
                 
@@ -179,10 +179,6 @@
                 
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
@@ -241,6 +237,70 @@
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-python-scripts" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/28/python-scripts/" class="article-date">
+      <time datetime="2016-12-28T01:52:10.000Z" itemprop="datePublished">2016-12-28</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/28/python-scripts/">python-scripts</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="Networking"><a href="#Networking" class="headerlink" title="Networking"></a>Networking</h2><h4 id="ip-and-int"><a href="#ip-and-int" class="headerlink" title="ip and int"></a>ip and int</h4><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;</span>&gt; a = <span class="string">'192.168.0.1'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; import socket</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; import struct</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b = socket.inet_aton(a)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; b</div><div class="line"><span class="string">'\xc0\xa8\x00\x01'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c = struct.unpack(<span class="string">'!I'</span>, b)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c</div><div class="line">(<span class="number">3232235521</span>,)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c = struct.unpack(<span class="string">'!I'</span>, b)[<span class="number">0</span>]</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; c</div><div class="line"><span class="number">3232235521</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; d = struct.pack(<span class="string">'!I'</span>, c)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; d</div><div class="line"><span class="string">'\xc0\xa8\x00\x01'</span></div><div class="line"><span class="meta">&gt;&gt;</span>&gt; e = socket.inet_ntoa(d)</div><div class="line"><span class="meta">&gt;&gt;</span>&gt; e</div><div class="line"><span class="string">'192.168.0.1'</span></div></pre></td></tr></table></figure>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2016/12/28/python-scripts/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-study-resources" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -681,74 +741,6 @@
       
           
         <h3 id="Spring-IoC-容器及beans介绍"><a href="#Spring-IoC-容器及beans介绍" class="headerlink" title="Spring IoC 容器及beans介绍"></a>Spring IoC 容器及beans介绍</h3><p>这一章包括Spring IoC容器的原理。IoC也被称为依赖注入DI（注：还是有点区别的）。在创建bean的时候，IoC容器注入依赖。<br>org.springframework.beans and org.springframework.context包是Spring Ioc容器的基础。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-ref/">spring-ref</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Spring-ref-Part-2-Core-Technologies" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/28/Spring-ref-Part-2-Core-Technologies/" class="article-date">
-      <time datetime="2016-07-28T07:36:00.000Z" itemprop="datePublished">2016-07-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/28/Spring-ref-Part-2-Core-Technologies/">Spring-ref Part 2 Core Technologies</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h3 id="Core-Technologies"><a href="#Core-Technologies" class="headerlink" title="Core Technologies"></a>Core Technologies</h3><p>该部分是Spring框架绝对不可或缺的部分。<br>Spring的核心包括IoC以及AOP。Spring的AOP框架满足80%的Java EE AOP要求。</p>
-<ul>
-<li>Ch 7: IoC容器</li>
-<li>Ch 8: Resources</li>
-<li>Ch 9: 验证、数据绑定及类型转换</li>
-<li>Ch 10: Spring Expression语言</li>
-<li>Ch 11: AOP</li>
-<li>Ch 12: Spring AOP APIs</li>
-</ul>
 
       
     </div>
