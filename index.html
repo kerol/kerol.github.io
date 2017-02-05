@@ -171,7 +171,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/about/">about</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/">flask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hack/">hack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/market/">market</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pypa/">pypa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travis/">travis</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/about/">about</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/encrypt/">encrypt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/">flask</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/from2next/">from2next</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gradle/">gradle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hack/">hack</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/market/">market</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pypa/">pypa</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pypy/">pypy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/resources/">resources</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ia/">spring-ia</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-ref/">spring-ref</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thinking/">thinking</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travis/">travis</a></li></ul>
                     </div>
                 </section>
                 
@@ -237,6 +237,71 @@
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-pypy" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/05/pypy/" class="article-date">
+      <time datetime="2017-02-05T08:58:16.000Z" itemprop="datePublished">2017-02-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/05/pypy/">PyPy</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h3 id="PyPy是什么？"><a href="#PyPy是什么？" class="headerlink" title="PyPy是什么？"></a>PyPy是什么？</h3><p><a href="http://pypy.org/index.html">PyPy</a>使用rPython语言和JIT实现了可以替代CPython的Python解析器。</p>
+<h3 id="为什么选择PyPy？"><a href="#为什么选择PyPy？" class="headerlink" title="为什么选择PyPy？"></a>为什么选择PyPy？</h3><p>主要原因是速度快。以寻找50000以内的素数为例，同样的代码CPython要用7点多秒，PyPy只需要0.8秒。<br>PyPy已经基本兼容Python2.7.12，但是对于Python3的兼容还没有那么快。<br>需要注意的地方：<br>CPython执行所有的代码都要解析机器码，但是PyPy的JIT技术优化部分代码到CPU中，所以速度回很快，但是前期的编译也会浪费部分时间，<br>对于重复执行的代码，PyPy的速度要比CPython快几倍，但是PyPy对于C语言的扩展还不是特别好，如果你的代码只需要执行一次或者频繁使用C语言扩展的话，<br>还是建议使用CPython，其他情况请尽情享受PyPy的速度吧！<br>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pypy/">pypy</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2017/02/05/pypy/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-增长黑客" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -676,70 +741,6 @@
       
         <p class="article-more-link">
           <a href="/2017/01/11/flask-request/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-网易一千零一夜" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/01/09/网易一千零一夜/" class="article-date">
-      <time datetime="2017-01-08T19:03:56.000Z" itemprop="datePublished">2017-01-09</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/09/网易一千零一夜/">《网易一千零一夜》</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>主题是网易在差不多三年的时间积累的关于项目管理的经验和方案。<br>网易杭研PMO部门在网易多个项目如何选择不同的项目管理方案。<br>本书主要分为4章，第1章我是项目经理介绍了了项目经理的基本工作以及如何做好，<br>第2章高度延伸从有效管理和提升的角度，思考了各个阶段项目经理实操工作背后的深层原则和思路，<br>第3章宽度扩展讲述了项目管理和业务结合实战的过程中的一些工具和武器，<br>第4章深度修炼借着小鱼儿的故事讲述了项目经理如何在成长的过程中自我修炼、提升管理能力、提升核心竞争力、困境中突破自己等。<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reading/">reading</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2017/01/09/网易一千零一夜/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
