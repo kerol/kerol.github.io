@@ -132,13 +132,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -234,7 +234,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap">
   
@@ -334,7 +334,7 @@
       
           
               <p>最近对接各家支付，加密方式和流程眼花缭乱，有空总结下加密方式和处理流程，包括但不限于AES、RSA、SHA、MD5、BASE64等。<br>由于时间和篇幅限制，只用Python语言做示例，Java的代码篇幅太大，一般PHP都有示例代码，毕竟是世界上最好的编程语言，<br>喝杯Java冷静下。。。</p>
-<h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h3><p>pycrypto[<a href="https://www.dlitz.net/software/pycrypto/api/current/">https://www.dlitz.net/software/pycrypto/api/current/</a>]<br>不太清楚CentOS服务器上的swig问题，Mac遇到的问题解决:<br>stackoverflow[<a href="http://stackoverflow.com/questions/33005354/">http://stackoverflow.com/questions/33005354/</a>]<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">pip</span> install crypto # trouble comes here?</div><div class="line"><span class="keyword">brew </span>install openssl</div><div class="line"><span class="keyword">brew </span>install <span class="keyword">swig</div><div class="line"></span><span class="symbol">env</span> LDFLAGS=<span class="string">"-L$(brew --prefix openssl)/lib"</span> \</div><div class="line"><span class="symbol">CFLAGS</span>=<span class="string">"-I$(brew --prefix openssl)/include"</span> \</div><div class="line"><span class="keyword">SWIG_FEATURES="-cpperraswarn </span>-includeall -I$(<span class="keyword">brew </span>--prefix openssl)/<span class="meta">include</span><span class="string">" \</span></div></pre></td></tr></table></figure></p>
+<h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h3><p>pycrypto[<a href="https://www.dlitz.net/software/pycrypto/api/current/" target="_blank" rel="noopener">https://www.dlitz.net/software/pycrypto/api/current/</a>]<br>不太清楚CentOS服务器上的swig问题，Mac遇到的问题解决:<br>stackoverflow[<a href="http://stackoverflow.com/questions/33005354/" target="_blank" rel="noopener">http://stackoverflow.com/questions/33005354/</a>]<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pip install crypto # trouble comes here?</span><br><span class="line">brew install openssl</span><br><span class="line">brew install swig</span><br><span class="line">env <span class="attribute">LDFLAGS</span>=<span class="string">"-L<span class="variable">$(brew --prefix openssl)</span>/lib"</span> \</span><br><span class="line"><span class="attribute">CFLAGS</span>=<span class="string">"-I<span class="variable">$(brew --prefix openssl)</span>/include"</span> \</span><br><span class="line"><span class="attribute">SWIG_FEATURES</span>=<span class="string">"-cpperraswarn -includeall -I<span class="variable">$(brew --prefix openssl)</span>/include"</span> \</span><br></pre></td></tr></table></figure></p>
 <h3 id="AES"><a href="#AES" class="headerlink" title="AES"></a>AES</h3>
           
       
@@ -410,7 +410,7 @@
 <h3 id="2-2-自动化装配bean"><a href="#2-2-自动化装配bean" class="headerlink" title="2.2 自动化装配bean"></a>2.2 自动化装配bean</h3><p>Spring从两个角度来实现自动化装配：</p>
 <ul>
 <li>组件扫描：Spring会自动发现上下文中创建的bean；</li>
-<li>自动装配：自动满足bean之间的依赖关系；<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.beans</span><span class="selector-class">.factory</span><span class="selector-class">.annotation</span><span class="selector-class">.Autowired</span>;</div><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.stereotype</span><span class="selector-class">.Compoment</span>;</div><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.annotation</span><span class="selector-class">.Configuration</span>;</div><div class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.annotation</span><span class="selector-class">.CompomentScan</span>;</div></pre></td></tr></table></figure>
+<li>自动装配：自动满足bean之间的依赖关系；<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.beans</span><span class="selector-class">.factory</span><span class="selector-class">.annotation</span><span class="selector-class">.Autowired</span>;</span><br><span class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.stereotype</span><span class="selector-class">.Compoment</span>;</span><br><span class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.annotation</span><span class="selector-class">.Configuration</span>;</span><br><span class="line"><span class="selector-tag">import</span> <span class="selector-tag">org</span><span class="selector-class">.springframework</span><span class="selector-class">.context</span><span class="selector-class">.annotation</span><span class="selector-class">.CompomentScan</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
           
@@ -700,7 +700,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h3><p>如果你刚接触Spring，推荐使用Spring Boot来创建应用。Spring Boot基于Spring框架，集成了tomcat等模块，让你尽快跑起应用。<br>你可以使用<a href="http://start.spring.io" target="_blank" rel="external">start.spring.io</a>来创建基本工程，照着其他Getting Started guides就行了。你也可以发现其他Spring portfolio工程。</p>
+        <h3 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h3><p>如果你刚接触Spring，推荐使用Spring Boot来创建应用。Spring Boot基于Spring框架，集成了tomcat等模块，让你尽快跑起应用。<br>你可以使用<a href="http://start.spring.io" target="_blank" rel="noopener">start.spring.io</a>来创建基本工程，照着其他Getting Started guides就行了。你也可以发现其他Spring portfolio工程。</p>
 <p>注：下载基本工程后，需要熟悉gradle的配置，使用idea IDE和vim编辑器来开发。</p>
 
       
@@ -761,7 +761,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Spring框架是企业级应用的一站式轻量级解决方案。spring是模块化的，你可以使用其中的部分模块。你可以使用IOC容器，其他web框架放在顶层，也可以只使用hibernate集成代码和JDBC抽象层。spring支持声明式事务管理，通过RMI或web服务远程调用逻辑以及支持多种持久化数据的选择。Spring提供全功能的MVC框架并且可以透明化的集成AOP到你的软件中。<br>Spring是非侵入式的，你的逻辑代码不用依赖框架本身。在部分integration layer你可能需要data access和Spring libraries的依赖，但是你也可以轻松的从代码本身独立出来这些依赖。<br>有什么问题可以在mailing list去post或者在<a href="http://spring.io/questions" target="_blank" rel="external">类似StackOverflow的Spring问答</a> ask questions.</p>
+        <p>Spring框架是企业级应用的一站式轻量级解决方案。spring是模块化的，你可以使用其中的部分模块。你可以使用IOC容器，其他web框架放在顶层，也可以只使用hibernate集成代码和JDBC抽象层。spring支持声明式事务管理，通过RMI或web服务远程调用逻辑以及支持多种持久化数据的选择。Spring提供全功能的MVC框架并且可以透明化的集成AOP到你的软件中。<br>Spring是非侵入式的，你的逻辑代码不用依赖框架本身。在部分integration layer你可能需要data access和Spring libraries的依赖，但是你也可以轻松的从代码本身独立出来这些依赖。<br>有什么问题可以在mailing list去post或者在<a href="http://spring.io/questions" target="_blank" rel="noopener">类似StackOverflow的Spring问答</a> ask questions.</p>
 
       
     </div>
@@ -803,11 +803,11 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 Kerol Gao
+                2016-2018 Kerol Gao
                 <a class="link" href="http://www.miitbeian.gov.cn">粤ICP备16010619号-1</a>
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
@@ -823,9 +823,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

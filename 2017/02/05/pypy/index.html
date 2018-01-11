@@ -10,19 +10,17 @@
 
 
 
-<meta name="description" content="PyPy是什么？PyPy使用rPython语言和JIT实现了可以替代CPython的Python解析器。
-为什么选择PyPy？主要原因是速度快。以寻找50000以内的素数为例，同样的代码CPython要用7点多秒，PyPy只需要0.8秒。PyPy已经基本兼容Python2.7.12，但是对于Python3的兼容还没有那么快。需要注意的地方：CPython执行所有的代码都要解析机器码，但是PyPy的">
+<meta name="description" content="PyPy是什么？PyPy使用rPython语言和JIT实现了可以替代CPython的Python解析器。 为什么选择PyPy？主要原因是速度快。以寻找50000以内的素数为例，同样的代码CPython要用7点多秒，PyPy只需要0.8秒。PyPy已经基本兼容Python2.7.12，但是对于Python3的兼容还没有那么快。需要注意的地方：CPython执行所有的代码都要解析机器码，但是PyPy的">
+<meta name="keywords" content="pypy">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PyPy">
 <meta property="og:url" content="http://kerol.me/2017/02/05/pypy/index.html">
 <meta property="og:site_name" content="kerol.me">
-<meta property="og:description" content="PyPy是什么？PyPy使用rPython语言和JIT实现了可以替代CPython的Python解析器。
-为什么选择PyPy？主要原因是速度快。以寻找50000以内的素数为例，同样的代码CPython要用7点多秒，PyPy只需要0.8秒。PyPy已经基本兼容Python2.7.12，但是对于Python3的兼容还没有那么快。需要注意的地方：CPython执行所有的代码都要解析机器码，但是PyPy的">
+<meta property="og:description" content="PyPy是什么？PyPy使用rPython语言和JIT实现了可以替代CPython的Python解析器。 为什么选择PyPy？主要原因是速度快。以寻找50000以内的素数为例，同样的代码CPython要用7点多秒，PyPy只需要0.8秒。PyPy已经基本兼容Python2.7.12，但是对于Python3的兼容还没有那么快。需要注意的地方：CPython执行所有的代码都要解析机器码，但是PyPy的">
 <meta property="og:updated_time" content="2017-02-05T09:03:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PyPy">
-<meta name="twitter:description" content="PyPy是什么？PyPy使用rPython语言和JIT实现了可以替代CPython的Python解析器。
-为什么选择PyPy？主要原因是速度快。以寻找50000以内的素数为例，同样的代码CPython要用7点多秒，PyPy只需要0.8秒。PyPy已经基本兼容Python2.7.12，但是对于Python3的兼容还没有那么快。需要注意的地方：CPython执行所有的代码都要解析机器码，但是PyPy的">
+<meta name="twitter:description" content="PyPy是什么？PyPy使用rPython语言和JIT实现了可以替代CPython的Python解析器。 为什么选择PyPy？主要原因是速度快。以寻找50000以内的素数为例，同样的代码CPython要用7点多秒，PyPy只需要0.8秒。PyPy已经基本兼容Python2.7.12，但是对于Python3的兼容还没有那么快。需要注意的地方：CPython执行所有的代码都要解析机器码，但是PyPy的">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -134,13 +132,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -236,7 +234,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap"><article id="post-pypy" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -278,12 +276,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="PyPy是什么？"><a href="#PyPy是什么？" class="headerlink" title="PyPy是什么？"></a>PyPy是什么？</h3><p><a href="http://pypy.org/index.html" target="_blank" rel="external">PyPy</a>使用rPython语言和JIT实现了可以替代CPython的Python解析器。</p>
+        <h3 id="PyPy是什么？"><a href="#PyPy是什么？" class="headerlink" title="PyPy是什么？"></a>PyPy是什么？</h3><p><a href="http://pypy.org/index.html" target="_blank" rel="noopener">PyPy</a>使用rPython语言和JIT实现了可以替代CPython的Python解析器。</p>
 <h3 id="为什么选择PyPy？"><a href="#为什么选择PyPy？" class="headerlink" title="为什么选择PyPy？"></a>为什么选择PyPy？</h3><p>主要原因是速度快。以寻找50000以内的素数为例，同样的代码CPython要用7点多秒，PyPy只需要0.8秒。<br>PyPy已经基本兼容Python2.7.12，但是对于Python3的兼容还没有那么快。<br>需要注意的地方：<br>CPython执行所有的代码都要解析机器码，但是PyPy的JIT技术优化部分代码到CPU中，所以速度回很快，但是前期的编译也会浪费部分时间，<br>对于重复执行的代码，PyPy的速度要比CPython快几倍，但是PyPy对于C语言的扩展还不是特别好，如果你的代码只需要执行一次或者频繁使用C语言扩展的话，<br>还是建议使用CPython，其他情况请尽情享受PyPy的速度吧！<br><a id="more"></a></p>
-<h3 id="PyPy的安装"><a href="#PyPy的安装" class="headerlink" title="PyPy的安装"></a>PyPy的安装</h3><p>PyPy直接编译源代码比较麻烦，建议直接使用编译好的。<br><a href="https://github.com/squeaky-pl/portable-pypy#portable-pypy-distribution-for-linux" target="_blank" rel="external">下载地址</a><br><a href="http://doc.pypy.org/en/latest/install.html" target="_blank" rel="external">参考文档</a><br>下载完成后，解压缩到/opt目录下面，文件夹命名为pypy：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">tar</span> xf pypy-xxx.tar.<span class="keyword">bz2</span></div><div class="line"><span class="symbol">mv</span> pypy-xxx pypy</div><div class="line">./pypy/<span class="keyword">bin/pypy</span></div><div class="line"><span class="symbol">ln</span> -s /usr/local/<span class="keyword">bin/pypy </span>/<span class="meta">opt</span>/pypy/<span class="keyword">bin/pypy</span></div><div class="line">./pypy-xxx/<span class="keyword">bin/pypy </span>-m ensurepip</div></pre></td></tr></table></figure></p>
-<h3 id="PyPy与uwsgi"><a href="#PyPy与uwsgi" class="headerlink" title="PyPy与uwsgi"></a>PyPy与uwsgi</h3><p>Environment: PyPy+uwsgi+flask+nginx<br>虚拟环境安装:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/<span class="meta">opt</span>/pypy-xxx/<span class="keyword">bin/pip </span>install supervisor</div><div class="line"><span class="symbol">virtualenv</span> -p pypy env</div><div class="line"><span class="symbol">env</span>/<span class="keyword">bin/pip </span>install -r requirements.txt</div></pre></td></tr></table></figure></p>
-<p>uwsgi.ini主要配置：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="section">[uwsgi]</span></div><div class="line"><span class="attr">http</span> = :<span class="number">5060</span></div><div class="line"><span class="attr">chdir</span> = /path/to/project/home/folder</div><div class="line"><span class="comment"># cpython use module and callable, pypy use pypy-wsgi-file</span></div><div class="line"><span class="comment">#module = app</span></div><div class="line"><span class="comment">#callable = application</span></div><div class="line"><span class="attr">pypy-wsgi-file</span> = app.py</div><div class="line"><span class="attr">master</span> = <span class="literal">true</span></div></pre></td></tr></table></figure></p>
-<p>wsgi协议app.py:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">from main_module <span class="keyword">import</span> init </div><div class="line">application = <span class="keyword">init</span>.create_app()</div></pre></td></tr></table></figure></p>
+<h3 id="PyPy的安装"><a href="#PyPy的安装" class="headerlink" title="PyPy的安装"></a>PyPy的安装</h3><p>PyPy直接编译源代码比较麻烦，建议直接使用编译好的。<br><a href="https://github.com/squeaky-pl/portable-pypy#portable-pypy-distribution-for-linux" target="_blank" rel="noopener">下载地址</a><br><a href="http://doc.pypy.org/en/latest/install.html" target="_blank" rel="noopener">参考文档</a><br>下载完成后，解压缩到/opt目录下面，文件夹命名为pypy：<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">tar</span> xf pypy-xxx.tar.<span class="keyword">bz2</span></span><br><span class="line"><span class="keyword">mv </span>pypy-xxx pypy</span><br><span class="line">./pypy/<span class="keyword">bin/pypy</span></span><br><span class="line"><span class="keyword">ln </span>-s /usr/local/<span class="keyword">bin/pypy </span>/<span class="meta">opt</span>/pypy/<span class="keyword">bin/pypy</span></span><br><span class="line"><span class="keyword">./pypy-xxx/bin/pypy </span>-m ensurepip</span><br></pre></td></tr></table></figure></p>
+<h3 id="PyPy与uwsgi"><a href="#PyPy与uwsgi" class="headerlink" title="PyPy与uwsgi"></a>PyPy与uwsgi</h3><p>Environment: PyPy+uwsgi+flask+nginx<br>虚拟环境安装:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/<span class="meta">opt</span>/pypy-xxx/<span class="keyword">bin/pip </span>install supervisor</span><br><span class="line"><span class="symbol">virtualenv</span> -p pypy env</span><br><span class="line"><span class="symbol">env</span>/<span class="keyword">bin/pip </span>install -r requirements.txt</span><br></pre></td></tr></table></figure></p>
+<p>uwsgi.ini主要配置：<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[uwsgi]</span></span><br><span class="line"><span class="attr">http</span> = :<span class="number">5060</span></span><br><span class="line"><span class="attr">chdir</span> = /path/to/project/home/folder</span><br><span class="line"><span class="comment"># cpython use module and callable, pypy use pypy-wsgi-file</span></span><br><span class="line"><span class="comment">#module = app</span></span><br><span class="line"><span class="comment">#callable = application</span></span><br><span class="line"><span class="attr">pypy-wsgi-file</span> = app.py</span><br><span class="line"><span class="attr">master</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>wsgi协议app.py:<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">from main_module <span class="keyword">import</span> init </span><br><span class="line">application = <span class="keyword">init</span>.create_app()</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -292,17 +290,17 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/02/05/pypy/">PyPy</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Kerol Gao</a></p>
-        <p><span>发布时间:</span>2017-02-05, 16:58:16</p>
-        <p><span>最后更新:</span>2017-02-05, 17:03:10</p>
+        <p><span>Title:</span><a href="/2017/02/05/pypy/">PyPy</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Kerol Gao</a></p>
+        <p><span>Created:</span>2017-02-05, 16:58:16</p>
+        <p><span>Updated:</span>2017-02-05, 17:03:10</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/02/05/pypy/" title="PyPy">http://kerol.me/2017/02/05/pypy/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://kerol.me/2017/02/05/pypy/　　作者: Kerol Gao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/02/05/pypy/" title="PyPy">http://kerol.me/2017/02/05/pypy/</a>
+            <span class="copy-path" data-clipboard-text="From http://kerol.me/2017/02/05/pypy/　　By Kerol Gao" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
     </div>
 
@@ -329,7 +327,7 @@
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
+        <strong class="toc-title">Contents</strong>
         
             <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#PyPy是什么？"><span class="toc-number">1.</span> <span class="toc-text">PyPy是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为什么选择PyPy？"><span class="toc-number">2.</span> <span class="toc-text">为什么选择PyPy？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PyPy的安装"><span class="toc-number">3.</span> <span class="toc-text">PyPy的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PyPy与uwsgi"><span class="toc-number">4.</span> <span class="toc-text">PyPy与uwsgi</span></a></li></ol>
         
@@ -345,10 +343,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
     <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
     </script>
 
 
@@ -387,15 +385,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/02/06/api-security/" title="上一篇: API-Security">
+            <a href="/2017/02/06/api-security/" title="Pre: API-Security">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/28/增长黑客/" title="下一篇: 《增长黑客》">
+            <a href="/2017/01/28/增长黑客/" title="Next: 《增长黑客》">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -415,11 +413,11 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 Kerol Gao
+                2016-2018 Kerol Gao
                 <a class="link" href="http://www.miitbeian.gov.cn">粤ICP备16010619号-1</a>
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
@@ -435,9 +433,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window

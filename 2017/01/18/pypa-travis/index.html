@@ -10,22 +10,17 @@
 
 
 
-<meta name="description" content="PrefaceThis article is about how to build your own pypa package and use auto testing tool travis.
-PypaReference
-Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (https://pypi">
+<meta name="description" content="PrefaceThis article is about how to build your own pypa package and use auto testing tool travis. PypaReference Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (https://pypi">
+<meta name="keywords" content="pypa,travis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pypa-travis">
 <meta property="og:url" content="http://kerol.me/2017/01/18/pypa-travis/index.html">
 <meta property="og:site_name" content="kerol.me">
-<meta property="og:description" content="PrefaceThis article is about how to build your own pypa package and use auto testing tool travis.
-PypaReference
-Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (https://pypi">
+<meta property="og:description" content="PrefaceThis article is about how to build your own pypa package and use auto testing tool travis. PypaReference Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (https://pypi">
 <meta property="og:updated_time" content="2017-01-20T03:23:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pypa-travis">
-<meta name="twitter:description" content="PrefaceThis article is about how to build your own pypa package and use auto testing tool travis.
-PypaReference
-Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (https://pypi">
+<meta name="twitter:description" content="PrefaceThis article is about how to build your own pypa package and use auto testing tool travis. PypaReference Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (https://pypi">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -137,13 +132,13 @@ Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -239,7 +234,7 @@ Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap"><article id="post-pypa-travis" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -282,18 +277,18 @@ Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (
       
           
         <h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>This article is about how to build your own pypa package and use auto testing tool travis.</p>
-<h3 id="Pypa"><a href="#Pypa" class="headerlink" title="Pypa"></a>Pypa</h3><p><a href="https://packaging.python.org/distributing/" target="_blank" rel="external">Reference</a></p>
-<h4 id="Step-1-Requirements"><a href="#Step-1-Requirements" class="headerlink" title="Step 1: Requirements"></a>Step 1: Requirements</h4><p>For (<a href="https://pypi.python.org/pypi" target="_blank" rel="external">https://pypi.python.org/pypi</a>): <code>twine&lt;=1.6.5</code><br>For (<a href="https://pypi.io" target="_blank" rel="external">https://pypi.io</a>): use latest twine<br>Here I use twine 1.6.5<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install twine==<span class="number">1.6</span><span class="number">.5</span></div></pre></td></tr></table></figure></p>
+<h3 id="Pypa"><a href="#Pypa" class="headerlink" title="Pypa"></a>Pypa</h3><p><a href="https://packaging.python.org/distributing/" target="_blank" rel="noopener">Reference</a></p>
+<h4 id="Step-1-Requirements"><a href="#Step-1-Requirements" class="headerlink" title="Step 1: Requirements"></a>Step 1: Requirements</h4><p>For (<a href="https://pypi.python.org/pypi" target="_blank" rel="noopener">https://pypi.python.org/pypi</a>): <code>twine&lt;=1.6.5</code><br>For (<a href="https://pypi.io" target="_blank" rel="noopener">https://pypi.io</a>): use latest twine<br>Here I use twine 1.6.5<br><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install twine==<span class="number">1.6</span><span class="number">.5</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="Step-2-Configure-your-project"><a href="#Step-2-Configure-your-project" class="headerlink" title="Step 2: Configure your project"></a>Step 2: Configure your project</h4><a id="more"></a>
 <ul>
 <li>setup.py</li>
 <li>setup.cfg</li>
-<li>your-package<h5 id="setup-py"><a href="#setup-py" class="headerlink" title="setup.py"></a>setup.py</h5><a href="https://github.com/kerol/kepython/blob/master/setup.py" target="_blank" rel="external">Reference</a><figure class="highlight prolog"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">setup(</div><div class="line">    name=<span class="string">'kepython'</span>,</div><div class="line">    version=<span class="string">'0.1.2'</span>,</div><div class="line">    description=<span class="string">'Python utils by kerol'</span>,</div><div class="line">    long_description=long_description,</div><div class="line">    url=<span class="string">'https://github.com/kerol/kepython'</span>,</div><div class="line">    author=<span class="string">'Kerol Gao'</span>,</div><div class="line">    author_email=<span class="string">'ikerol@163.com'</span>,</div><div class="line">    license=<span class="string">'Apache'</span>,</div><div class="line">    packages=[<span class="string">'kepython'</span>,],</div><div class="line">    include_package_data=<span class="symbol">True</span>,</div><div class="line">    install_requires=[</div><div class="line">        <span class="string">'flask&gt;=0.12'</span>,</div><div class="line">        <span class="string">'scrapy&gt;=1.3.0'</span>,</div><div class="line">    ],</div><div class="line">    classifiers=[</div><div class="line">       <span class="string">'Development Status :: 3 - Alpha'</span>,</div><div class="line">        <span class="string">'Intended Audience :: Developers'</span>,</div><div class="line">        <span class="string">'License :: OSI Approved :: Apache Software License'</span>,</div><div class="line">       <span class="string">'Programming Language :: Python :: 3.6'</span>,</div><div class="line">   ],</div><div class="line">    entry_points=&#123;</div><div class="line">        <span class="string">'console_scripts'</span>: [</div><div class="line">            <span class="string">'kepython=kepython:main'</span>,</div><div class="line">        ],</div><div class="line">    &#125;,</div><div class="line">)</div></pre></td></tr></table></figure>
+<li>your-package<h5 id="setup-py"><a href="#setup-py" class="headerlink" title="setup.py"></a>setup.py</h5><a href="https://github.com/kerol/kepython/blob/master/setup.py" target="_blank" rel="noopener">Reference</a><figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">setup(</span><br><span class="line">    name=<span class="string">'kepython'</span>,</span><br><span class="line">    version=<span class="string">'0.1.2'</span>,</span><br><span class="line">    description=<span class="string">'Python utils by kerol'</span>,</span><br><span class="line">    long_description=long_description,</span><br><span class="line">    url=<span class="string">'https://github.com/kerol/kepython'</span>,</span><br><span class="line">    author=<span class="string">'Kerol Gao'</span>,</span><br><span class="line">    author_email=<span class="string">'ikerol@163.com'</span>,</span><br><span class="line">    license=<span class="string">'Apache'</span>,</span><br><span class="line">    packages=[<span class="string">'kepython'</span>,],</span><br><span class="line">    include_package_data=<span class="symbol">True</span>,</span><br><span class="line">    install_requires=[</span><br><span class="line">        <span class="string">'flask&gt;=0.12'</span>,</span><br><span class="line">        <span class="string">'scrapy&gt;=1.3.0'</span>,</span><br><span class="line">    ],</span><br><span class="line">    classifiers=[</span><br><span class="line">       <span class="string">'Development Status :: 3 - Alpha'</span>,</span><br><span class="line">        <span class="string">'Intended Audience :: Developers'</span>,</span><br><span class="line">        <span class="string">'License :: OSI Approved :: Apache Software License'</span>,</span><br><span class="line">       <span class="string">'Programming Language :: Python :: 3.6'</span>,</span><br><span class="line">   ],</span><br><span class="line">    entry_points=&#123;</span><br><span class="line">        <span class="string">'console_scripts'</span>: [</span><br><span class="line">            <span class="string">'kepython=kepython:main'</span>,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="setup-cfg"><a href="#setup-cfg" class="headerlink" title="setup.cfg"></a>setup.cfg</h5><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="section">[bdist_wheel]</span></div><div class="line"><span class="attr">universal</span>=<span class="number">1</span></div></pre></td></tr></table></figure>
-<h4 id="Step-3-Packaging-your-project"><a href="#Step-3-Packaging-your-project" class="headerlink" title="Step 3: Packaging your project"></a>Step 3: Packaging your project</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">python</span> setup.<span class="keyword">py</span> sdist</div><div class="line"><span class="keyword">python</span> setup.<span class="keyword">py</span> bdist_wheel</div><div class="line"># test</div><div class="line"># important <span class="keyword">to</span> <span class="keyword">do</span> unit test</div></pre></td></tr></table></figure>
-<h4 id="Step-4-Register-and-upload"><a href="#Step-4-Register-and-upload" class="headerlink" title="Step 4: Register and upload"></a>Step 4: Register and upload</h4><p>Register yourself in pypa.<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">twine register dist/mypkg<span class="selector-class">.whl</span></div><div class="line">twine register dist/mypkg<span class="selector-class">.tar</span><span class="selector-class">.gz</span></div><div class="line">twine upload dist<span class="comment">/*</span></div></pre></td></tr></table></figure></p>
+<h5 id="setup-cfg"><a href="#setup-cfg" class="headerlink" title="setup.cfg"></a>setup.cfg</h5><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[bdist_wheel]</span></span><br><span class="line"><span class="attr">universal</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h4 id="Step-3-Packaging-your-project"><a href="#Step-3-Packaging-your-project" class="headerlink" title="Step 3: Packaging your project"></a>Step 3: Packaging your project</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python setup.py sdist</span><br><span class="line">python setup.py bdist_wheel</span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">test</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> important to <span class="keyword">do</span> unit <span class="built_in">test</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="Step-4-Register-and-upload"><a href="#Step-4-Register-and-upload" class="headerlink" title="Step 4: Register and upload"></a>Step 4: Register and upload</h4><p>Register yourself in pypa.<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">twine register dist/mypkg.whl</span><br><span class="line">twine register dist/mypkg<span class="selector-class">.tar</span><span class="selector-class">.gz</span></span><br><span class="line">twine upload dist<span class="comment">/*</span></span><br></pre></td></tr></table></figure></p>
 <p>After serveral minutes, you will fine your packages.</p>
 <h3 id="Travis"><a href="#Travis" class="headerlink" title="Travis"></a>Travis</h3><p>todo</p>
 
@@ -304,17 +299,17 @@ Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/01/18/pypa-travis/">pypa-travis</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Kerol Gao</a></p>
-        <p><span>发布时间:</span>2017-01-18, 15:06:49</p>
-        <p><span>最后更新:</span>2017-01-20, 11:23:27</p>
+        <p><span>Title:</span><a href="/2017/01/18/pypa-travis/">pypa-travis</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Kerol Gao</a></p>
+        <p><span>Created:</span>2017-01-18, 15:06:49</p>
+        <p><span>Updated:</span>2017-01-20, 11:23:27</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/01/18/pypa-travis/" title="pypa-travis">http://kerol.me/2017/01/18/pypa-travis/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://kerol.me/2017/01/18/pypa-travis/　　作者: Kerol Gao" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/01/18/pypa-travis/" title="pypa-travis">http://kerol.me/2017/01/18/pypa-travis/</a>
+            <span class="copy-path" data-clipboard-text="From http://kerol.me/2017/01/18/pypa-travis/　　By Kerol Gao" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
     </div>
 
@@ -341,7 +336,7 @@ Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
+        <strong class="toc-title">Contents</strong>
         
             <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Preface"><span class="toc-number">1.</span> <span class="toc-text">Preface</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pypa"><span class="toc-number">2.</span> <span class="toc-text">Pypa</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-1-Requirements"><span class="toc-number">2.1.</span> <span class="toc-text">Step 1: Requirements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-2-Configure-your-project"><span class="toc-number">2.2.</span> <span class="toc-text">Step 2: Configure your project</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#setup-py"><span class="toc-number">2.2.1.</span> <span class="toc-text">setup.py</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#setup-cfg"><span class="toc-number">2.2.2.</span> <span class="toc-text">setup.cfg</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-3-Packaging-your-project"><span class="toc-number">2.3.</span> <span class="toc-text">Step 3: Packaging your project</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step-4-Register-and-upload"><span class="toc-number">2.4.</span> <span class="toc-text">Step 4: Register and upload</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Travis"><span class="toc-number">3.</span> <span class="toc-text">Travis</span></a></li></ol>
         
@@ -357,10 +352,10 @@ Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
     <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
     </script>
 
 
@@ -399,15 +394,15 @@ Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/01/19/charles/" title="上一篇: charles">
+            <a href="/2017/01/19/charles/" title="Pre: charles">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/15/pgp/" title="下一篇: PGP">
+            <a href="/2017/01/15/pgp/" title="Next: PGP">
                 <i class="fa fa-angle-right"></i>
             </a>
         
@@ -427,11 +422,11 @@ Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2016-2017 Kerol Gao
+                2016-2018 Kerol Gao
                 <a class="link" href="http://www.miitbeian.gov.cn">粤ICP备16010619号-1</a>
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
@@ -447,9 +442,9 @@ Step 1: RequirementsFor (https://pypi.python.org/pypi): twine&amp;lt;=1.6.5For (
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
